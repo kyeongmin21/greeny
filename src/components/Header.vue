@@ -2,7 +2,7 @@
   <div class="header">
     <ul class="left_gnb">
       <li>
-        <router-link to="/"><img src="/images/svg/logo.svg" alt="로고"></router-link>
+        <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
     </ul>
     <ul class="gnb">
