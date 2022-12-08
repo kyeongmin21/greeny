@@ -24,6 +24,7 @@
 
 .header .gnb li a {
   padding-left: 13px;
+  font-size: 17px;
 }
 
 .header .left_gnb {
@@ -50,11 +51,9 @@
 }
 
 .router-link-active {
-  color: white;
   background: url('../images/svg/logo_box.svg') no-repeat;
 }
 
 .router-link-exact-active {
-  color: white;
   background: url('../images/svg/logo_box.svg') no-repeat;
 }

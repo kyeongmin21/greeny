@@ -36,13 +36,13 @@ body {
 }
 
 .footer .footer_wrap ul {
-  padding: 15px 0;
+  padding: 20px 0 5px 0;
   display: flex;
 }
 
 .footer .footer_wrap ul li {
   font-weight: 600;
-  padding: 0 15px 0 0;
+  padding-right:15px;
   font-size: 13px;
   cursor: pointer;
 }
