@@ -11,10 +11,25 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
-  }
+    path: '/challenge',
+    name: 'Challenge',
+    component: () => import(/* webpackChunkName: "challenge" */ '@/views/Challenge/List.vue')
+  },
+  {
+    path: '/magazine',
+    name: 'Magazine',
+    component: () => import(/* webpackChunkName: "magazine" */ '@/views/Magazine/List.vue')
+  },
+  {
+    path: '/dailyLook',
+    name: 'DailyLook',
+    component: () => import(/* webpackChunkName: "dailyLook" */ '@/views/DailyLook/List.vue')
+  },
+  {
+    path: '/event',
+    name: 'Event',
+    component: () => import(/* webpackChunkName: "event" */ '@/views/Event/List.vue')
+  },
 ]
 
 const router = new VueRouter({

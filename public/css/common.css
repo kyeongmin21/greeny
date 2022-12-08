@@ -1,11 +1,21 @@
 @charset "utf-8";
 @import "reset.css";
 
+
+#nav {
+  width: 100%;
+  height: 100%;
+  padding: 150px 10px 50px 10px;
+  border: 2px solid red;
+}
+
 /********************************/
 /********** Header.vue **********/
 /********************************/
 .header {
-  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+  position: relative;
 }
 .header .gnb {
   width: 100%;
@@ -16,5 +26,28 @@
   border-bottom: 1px solid black;
 }
 .header .gnb li {
+  font-size: 15px;
   padding: 15px 20px;
+  font-weight: 700;
+}
+
+.left_gnb {
+  position: absolute;
+  top: 8px;
+  left: 5%;
+  width: 120px;
+}
+.left_gnb li img {
+  width: 100%;
+}
+
+.header .right_gnb {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  display: inline-block;
+}
+.header .right_gnb li {
+  display: inline-block;
+  padding: 13px 5px;
 }
