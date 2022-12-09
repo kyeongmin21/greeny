@@ -1,6 +1,16 @@
 <template>
   <div class="home">
 
+    <div class="banner_wrap">
+      <swiper class="swiper" :options="swiperOption" >
+        <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
+        <swiper-slide><img src="/images/home/top_banner02.png" alt="메인배너2"></swiper-slide>
+        <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
+        <!-- pagination -->
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
+
+
     <section>
       <div class="best_challenge">
         <h2><img src="/images/home/title01.png" alt="챌린지 타이틀"></h2>
@@ -18,19 +28,41 @@
         </ul>
       </div>
 
-      <div class="more">MORE</div>
+        <router-link to="/challenge">
+          <div class="more"></div>
+        </router-link>
     </section>
-
-
-
+    </div>
 
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
 
 export default {
   name: 'Home',
+  components:	{
+    Swiper,
+    SwiperSlide
+  },
+  data() {
+    return{
+      swiperOption: {
+        loop: true,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+      }
+    }
+  },
 
 }
 </script>

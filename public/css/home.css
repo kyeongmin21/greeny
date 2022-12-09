@@ -5,28 +5,25 @@
   width: 100%;
 }
 
+.home .swiper {
+  width: 100%;
+}
+
+.home .swiper-pagination {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  --swiper-theme-color: #76FF03;
+}
+
 .home section {
   width: 50%;
-  margin: 0 auto;
-}
-
-.home section .more{
-  width: 100px;
-  height: 30px;
-  border: 2px solid black;
-}
-
-.home section .best_challenge {
-
+  margin: 50px auto;
 }
 
 .home section .best_challenge h2 {
   width: 300px;
   padding: 15px 0;
-}
-
-.home section .best_challenge h2 img {
-  width: 100%;
 }
 
 .home section .best_challenge ul {
@@ -39,6 +36,7 @@
 }
 
 .home section .best_challenge li p {
+  font-size: 18px;
   padding: 5px 0;
 }
 
@@ -50,5 +48,18 @@
   padding-top: 15px;
 }
 
+.more {
+  width: 150px;
+  height: 50px;
+  margin-top: 50px;
+  background: url('../images/svg/more_black_line.svg') no-repeat;
+  background-size: 100% 100%;
+}
+
 .more:hover {
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+  background: url('../images/svg/more_black_line_hover.svg') no-repeat;
+  background-size: 100% 100%;
 }
