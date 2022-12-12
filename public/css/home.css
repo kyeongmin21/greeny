@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import "reset.css";
+
+.home {
+  width: 100%;
+}
+.home .logo {
+  width: 300px;
+  margin: 15px auto;
+}
+.home .swiper {
+  width: 100%;
+}
+
+.home .swiper-pagination {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  --swiper-theme-color: #76FF03;
+}
+
+.home section {
+  margin: 50px auto 150px;
+}
+
+.home section:last-child {
+  margin-bottom: 0;
+}
+
+.more {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background: url('../images/svg/more_black_line.svg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.more:hover {
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+  background: url('../images/svg/more_black_line_hover.svg') no-repeat;
+  background-size: 100% 100%;
+}
+
+
+/********** 베스트 챌린지 **********/
+.home section .best_challenge {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home section .best_challenge h2 {
+  width: 300px;
+  padding: 15px 0;
+}
+
+.home section .best_challenge ul {
+  display: flex;
+}
+
+.home section .best_challenge li {
+  width: 50%;
+  border-top: 1px solid #000;
+}
+
+.home section .best_challenge li p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.home section .best_challenge li:first-child {
+  margin-right: 10px;
+}
+
+.home section .best_challenge li img {
+  padding-top: 15px;
+}
+
+.home h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home h3 span {
+  background-color: #76FF03;
+}
+
+
+
+/********** 브랜드 **********/
+.home .brand {
+  width: 100%!important;
+}
+
+.home .brand h2 {
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+.home .brand h2 img {
+  width: 150px;
+}
+
+.home .brand ul {
+  width: 100%;
+  display: flex;
+}
+
+.home .brand ul li {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .brand ul li p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px 0 30px;
+}
+
+.home .brand ul li span {
+  line-height: 24px;
+}
+
+.home .brand .brand_content01 {
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
+}
+
+.home .brand .brand_content02 {
+  border-bottom: 1px solid #212121;
+}
+
+.home .brand .brand_content01 li:nth-child(1) {
+  border-right: 1px solid #212121;
+}
+
+.home .brand .brand_content02 li:nth-child(2) {
+  border-left: 1px solid #212121;
+  margin-left: 2px;
+}
+
+.home .brand .brand_content01 li:nth-child(2) {
+  margin: 0 auto;
+  width: 550px;
+}
+
+.home .brand .brand_content02 li:nth-child(1) {
+  width: 550px;
+  margin: 0 auto;
+}
+
+
+
+/********** 데일리룩 **********/
+.home .daily_look {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home .daily_look h2 {
+  width: 220px;
+}
+
+.home .daily_look ul {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.home .daily_look ul li {
+  width: 25%;
+  margin: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #212121;
+}
+
+.home .daily_look ul li:nth-child(1) {
+  margin-left: 0;
+}
+.home .daily_look ul li p {
+  font-weight: 800;
+  padding: 10px 0;
+}
+
+.home .daily_look ul li p span:nth-child(1) {
+  float: left;
+}
+
+.home .daily_look ul li p span:nth-child(2) {
+  float: right;
+}
+
+
+  /********** 이벤트 **********/
+.home .event  {
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #212121;
+  background-color: #FCFCFC;
+}
+.home .event ul {
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .event ul p {
+  padding-top: 10px;
+}
+
+

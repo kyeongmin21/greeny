@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url('NotoSansKR-Thin') format('otf');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url('NotoSansKR-Light') format('otf');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('NotoSansKR-Regular') format('otf');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+   font-style: normal;
+  font-weight: 500;
+  src: url('NotoSansKR-Medium') format('otf');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+   font-style: normal;
+  font-weight: 700;
+  src: url('NotoSansKR-Bold') format('otf');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+   font-style: normal;
+  font-weight: 900;
+  src: url('NotoSansKR-Black') format('otf');
+}
