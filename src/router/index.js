@@ -8,12 +8,15 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      layout: 'HomeLayout'
+    },
   },
   {
     path: '/challenge',
     name: 'Challenge',
-    component: () => import(/* webpackChunkName: "challenge" */ '@/views/Challenge/List.vue')
+    component: () => import(/* webpackChunkName: "challenge" */ '@/views/Challenge/List.vue'),
   },
   {
     path: '/magazine',

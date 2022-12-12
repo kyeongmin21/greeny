@@ -4,7 +4,6 @@
 .header {
   width: 100%;
   height: 50px;
-
   background-color: #fff;
   position: fixed;
   z-index: 100;
@@ -59,4 +58,14 @@
 
 .router-link-exact-active {
   background: url('../images/svg/logo_box.svg') no-repeat;
+}
+
+
+.header .top_btn {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <ul class="left_gnb">
+    <ul class="left_gnb" v-show="visible">
       <li>
         <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
@@ -25,7 +25,7 @@
       <li><img src="/images/svg/noti.svg" alt="알림"></li>
       <li><img src="/images/svg/write.svg" alt="글쓰기"></li>
     </ul>
-    <div class="top_btn" v-show="visible" @click="goTop">
+    <div class="top_btn" v-show="visible">
       <img src="/images/svg/top_btn.svg" alt="위로가기버튼">
     </div>
   </div>
@@ -34,7 +34,7 @@
 <script>
 
 export default {
-  name: "Header",
+  name: "HomeHeader",
   data() {
     return {
       visible: false
@@ -51,9 +51,6 @@ export default {
       } else if (window.scrollY < 90) {
         this.visible = !this.visible;
       }
-    },
-    goTop() {
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
     }
   }
 }

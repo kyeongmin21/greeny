@@ -4,7 +4,10 @@
 .home {
   width: 100%;
 }
-
+.home .logo {
+  width: 300px;
+  margin: 15px auto;
+}
 .home .swiper {
   width: 100%;
 }
@@ -63,7 +66,7 @@
 
 .home section .best_challenge li p {
   font-size: 18px;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .home section .best_challenge li:first-child {
