@@ -13,7 +13,7 @@
 
     <section>
       <div class="best_challenge">
-        <h2><img src="/images/svg/title01.svg" alt="챌린지 타이틀"></h2>
+        <h2><img src="/images/svg/home_title01.svg" alt="챌린지 타이틀"></h2>
         <ul>
           <li>
             <img src="/images/home/home_img01.png" alt="챌린지 이미지1">
@@ -34,7 +34,7 @@
 
       <section>
         <div class="brand">
-          <h2><img src="/images/svg/title02.svg" alt="브랜드 타이틀"></h2>
+          <h2><img src="/images/svg/home_title02.svg" alt="브랜드 타이틀"></h2>
           <ul class="brand_content01">
             <li>
               <img src="/images/home/home_img03.png" alt="브랜드 이미지1">
@@ -69,6 +69,83 @@
               <img src="/images/home/home_img04.png" alt="브랜드 이미지2">
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="daily_look">
+          <h2><img src="/images/svg/home_title03.svg" alt="브랜드 타이틀"></h2>
+          <ul>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시</p>
+              <p>
+                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+          </ul>
+          <router-link to="/dailyLook">
+            <div class="more"></div>
+          </router-link>
         </div>
       </section>
 

@@ -17,15 +17,33 @@
 }
 
 .home section {
-  margin: 50px auto 100px;
+  margin: 50px auto 150px;
 }
 
 .home section:last-child {
   margin-bottom: 0;
 }
 
+.more {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background: url('../images/svg/more_black_line.svg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.more:hover {
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+  background: url('../images/svg/more_black_line_hover.svg') no-repeat;
+  background-size: 100% 100%;
+}
+
+
+/********** 베스트 챌린지 **********/
 .home section .best_challenge {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -56,31 +74,6 @@
   padding-top: 15px;
 }
 
-.more {
-  width: 150px;
-  height: 50px;
-  margin-top: 20px;
-  background: url('../images/svg/more_black_line.svg') no-repeat;
-  background-size: 100% 100%;
-}
-
-.more:hover {
-  width: 150px;
-  height: 50px;
-  transition: 0.3s;
-  background: url('../images/svg/more_black_line_hover.svg') no-repeat;
-  background-size: 100% 100%;
-}
-
-.home .brand {
-  width: 100%!important;
-}
-
-.home .brand h2 {
-  width: 50%;
-  margin: 0 auto 20px;
-}
-
 .home h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -88,6 +81,18 @@
 
 .home h3 span {
   background-color: #76FF03;
+}
+
+
+
+/********** 브랜드 **********/
+.home .brand {
+  width: 100%!important;
+}
+
+.home .brand h2 {
+  width: 60%;
+  margin: 0 auto 20px;
 }
 
 .home .brand h2 img {
@@ -144,6 +149,49 @@
   margin: 0 auto;
 }
 
+
+
+/********** 데일리룩 **********/
+.home .daily_look {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home .daily_look h2 {
+  width: 220px;
+}
+
+.home .daily_look ul {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.home .daily_look ul li {
+  width: 25%;
+  margin: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #212121;
+}
+
+.home .daily_look ul li:nth-child(1) {
+  margin-left: 0;
+}
+.home .daily_look ul li p {
+  font-weight: 800;
+  padding: 10px 0;
+}
+
+.home .daily_look ul li p span:nth-child(1) {
+  float: left;
+}
+
+.home .daily_look ul li p span:nth-child(2) {
+  float: right;
+}
+
+
+  /********** 이벤트 **********/
 .home .event  {
   width: 100%;
   height: 300px;
@@ -152,7 +200,7 @@
 }
 .home .event ul {
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -162,3 +210,5 @@
 .home .event ul p {
   padding-top: 10px;
 }
+
+
