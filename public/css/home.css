@@ -17,8 +17,16 @@
 }
 
 .home section {
+  margin: 50px auto 100px;
+}
+
+.home section:last-child {
+  margin-bottom: 0;
+}
+
+.home section .best_challenge {
   width: 50%;
-  margin: 50px auto;
+  margin: 0 auto;
 }
 
 .home section .best_challenge h2 {
@@ -51,7 +59,7 @@
 .more {
   width: 150px;
   height: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
   background: url('../images/svg/more_black_line.svg') no-repeat;
   background-size: 100% 100%;
 }
@@ -62,4 +70,95 @@
   transition: 0.3s;
   background: url('../images/svg/more_black_line_hover.svg') no-repeat;
   background-size: 100% 100%;
+}
+
+.home .brand {
+  width: 100%!important;
+}
+
+.home .brand h2 {
+  width: 50%;
+  margin: 0 auto 20px;
+}
+
+.home h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home h3 span {
+  background-color: #76FF03;
+}
+
+.home .brand h2 img {
+  width: 150px;
+}
+
+.home .brand ul {
+  width: 100%;
+  display: flex;
+}
+
+.home .brand ul li {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .brand ul li p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px 0 30px;
+}
+
+.home .brand ul li span {
+  line-height: 24px;
+}
+
+.home .brand .brand_content01 {
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
+}
+
+.home .brand .brand_content02 {
+  border-bottom: 1px solid #212121;
+}
+
+.home .brand .brand_content01 li:nth-child(1) {
+  border-right: 1px solid #212121;
+}
+
+.home .brand .brand_content02 li:nth-child(2) {
+  border-left: 1px solid #212121;
+  margin-left: 2px;
+}
+
+.home .brand .brand_content01 li:nth-child(2) {
+  margin: 0 auto;
+  width: 550px;
+}
+
+.home .brand .brand_content02 li:nth-child(1) {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.home .event  {
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #212121;
+  background-color: #FCFCFC;
+}
+.home .event ul {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .event ul p {
+  padding-top: 10px;
 }
