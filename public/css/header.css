@@ -89,6 +89,7 @@
 
 .modal_search .container ul li:nth-child(1) {
   flex-grow: 1;
+  width: 100%;
 }
 
 .modal_search .container ul li:nth-child(2) {
@@ -96,15 +97,16 @@
   width: 30px;
 }
 
-.modal_search .icon img {
+.modal_search img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
 .modal_search input {
-  background-color: #eee;
+  width: 100%;
   border: none;
+  background-color: #eee;
   border-bottom: 1px solid #808080;
 }
 

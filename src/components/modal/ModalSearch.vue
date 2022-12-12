@@ -5,10 +5,8 @@
     <div class="modal_search overlay"  >
       <div class="container">
         <ul>
-          <li>
-            <input type="text">
-            <span class="icon"><img src="/images/svg/search.svg" alt="검색아이콘"></span>
-          </li>
+          <li><input type="text" placeholder="슬로우 패션 알아보기?!"></li>
+          <li><img src="/images/svg/search.svg" alt="검색아이콘"></li>
         </ul>
       </div>
       <div>
