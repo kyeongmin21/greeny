@@ -20,7 +20,7 @@
       </li>
     </ul>
     <ul class="right_gnb">
-      <li><img src="/images/svg/search.svg" alt="검색"></li>
+      <li @click="modalSearch" v-b-modal.modal-search><img src="/images/svg/search.svg" alt="검색"></li>
       <li><img src="/images/svg/my.svg" alt="마이페이지"></li>
       <li><img src="/images/svg/noti.svg" alt="알림"></li>
       <li><img src="/images/svg/write.svg" alt="글쓰기"></li>
@@ -28,16 +28,22 @@
     <div class="top_btn" v-show="visible" @click="goTop">
       <img src="/images/svg/top_btn.svg" alt="위로가기버튼">
     </div>
+
+    <ModalSearch v-model="modalSearchShow"/>
   </div>
 </template>
 
 <script>
-
+import ModalSearch from "@/components/modal/ModalSearch";
 export default {
   name: "Header",
+  components: {
+    ModalSearch,
+  },
   data() {
     return {
-      visible: false
+      visible: false,
+      modalSearchShow: false,
     }
   },
   created() {
@@ -54,7 +60,12 @@ export default {
     },
     goTop() {
       window.scrollTo({top:0, left:0, behavior:'smooth'});
-    }
+    },
+    modalSearch() {
+      this.$nextTick(() => {
+        this.modalSearchShow = !this.modalSearchShow;
+      })
+    },
   }
 }
 </script>

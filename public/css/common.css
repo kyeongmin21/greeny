@@ -2,13 +2,25 @@
 @import "reset.css";
 
 #nav {
+  font-size: 14px!important;
   width: 100%;
-  padding-top: 50px;
 }
 
 img {
   width: 100%;
 }
+
+a {
+  color: #212121!important;
+}
+
+a:hover {
+  text-decoration: none!important;
+}
+
+
+
+
 /********************************/
 /********** Header.vue **********/
 /********************************/
