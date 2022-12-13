@@ -9,12 +9,12 @@
             <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
               <b-form @submit.prevent="passes(onSubmit);" @reset="resetForm" class=" ">
                 <InputWithValidation rules="required|email"
-                                     type="text"
-                                     title="아이디"
+                                     type="email"
+                                     title="이메일"
                                      name="form.id"
                                      v-model="form.username"
                                      autocomplete="off"
-                                     placeholder="아이디를 입력해주세요."/>
+                                     placeholder="이메일을 입력해주세요."/>
                 <InputWithValidation rules="required|password"
                                      type="password"
                                      title="비밀번호"
@@ -28,7 +28,10 @@
           </li>
           <li>
             <label for="auto-login">
-              <input type="checkbox" id="auto-login">자동 로그인
+              <i class="fa fa-eye fa-lg"></i>
+              <i class="fa fa-angle-right"></i>
+              <font-awesome-icon icon="fa-light fa-eye" />
+              <input type="checkbox" id="auto-login"> ㅋㅋ자동 로그인
             </label>
           </li>
           <li>
@@ -69,7 +72,7 @@ export default {
   name: "Login",
   components: {
     ValidationObserver,
-    InputWithValidation,
+    InputWithValidation
   },
   data() {
     return {
