@@ -22,6 +22,9 @@ ul {
   margin-bottom: 0!important;
 }
 
+.form-control {
+  border-radius: 0!important;
+}
 
 
 /********************************/

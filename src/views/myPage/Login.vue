@@ -5,12 +5,32 @@
       <div class="login_input">
         <h3>LOGIN</h3>
         <ul>
-          <li><input type="email" placeholder="이메일을 입력하세요"></li>
-          <li><input type="password" placeholder="비밀번호를 입력하세요"></li>
+          <li>
+            <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
+              <b-form @submit.prevent="passes(onSubmit);" @reset="resetForm" class=" ">
+                <InputWithValidation rules="required|email"
+                                     type="text"
+                                     title="아이디"
+                                     name="form.id"
+                                     v-model="form.username"
+                                     description=""
+                                     autocomplete="off"
+                                     placeholder="아이디를 입력해주세요."/>
+                <InputWithValidation rules="required|password"
+                                     type="password"
+                                     title="비밀번호"
+                                     name="form.password"
+                                     v-model="form.password" description="" placeholder="비밀번호를 입력해주세요."/>
+                <span class="text-danger"> {{ invalidMessage }}</span>
+              </b-form>
+            </ValidationObserver>
+          </li>
           <li>
             <label for="auto-login"><input type="checkbox" id="auto-login"> 자동 로그인</label>
           </li>
-          <li><b-button variant="light" @click="login">로그인</b-button></li>
+          <li>
+            <b-button variant="light" @click="login">로그인</b-button>
+          </li>
         </ul>
       </div>
 
@@ -39,12 +59,31 @@
 </template>
 
 <script>
+import {ValidationObserver} from 'vee-validate'
+import InputWithValidation from '@/components/common/validations/inputbox'
+
 export default {
   name: "Login",
+  components: {
+    ValidationObserver,
+    InputWithValidation,
+  },
   data() {
-    return {}
+    return {
+      form_: {
+        username: '',
+        password: ''
+      },
+      form: {},
+      invalidMessage: ''
+    }
   },
   methods: {
+    resetForm() {
+      requestAnimationFrame(() => {
+        this.$refs.observer.reset()
+      })
+    },
     login() {
       console.log('로그인!!')
     }

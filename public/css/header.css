@@ -218,7 +218,9 @@ div#modal-search___BV_modal_content_ {
   border: 1px solid #808080;
 }
 
-.login .login_cont .login_input ul li:nth-child(3) {
+.login .login_cont .login_input ul li:nth-child(2) {
+  width: 100%;
+  text-align: right;
   cursor: pointer;
   float: right;
   margin-bottom:10px;
@@ -286,4 +288,8 @@ div#modal-search___BV_modal_content_ {
   font-weight: 600;
   color: #808080;
   font-size: 16px;
+}
+
+.login .login_cont input:focus {
+  border:1px solid #76FF03!important;
 }
