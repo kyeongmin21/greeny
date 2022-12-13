@@ -76,41 +76,10 @@
 /********************************/
 /******* ModalSearch.vue ********/
 /********************************/
-
-.modal-dialog {
-  max-width: 100%!important;
-  margin: 0!important;
-  height: 500px;
-}
-.modal_search .container ul {
-  width: 100%;
-  display: flex;
-}
-
-.modal_search .container ul li:nth-child(1) {
-  flex-grow: 1;
-}
-
-.modal_search .container ul li:nth-child(2) {
-  flex-shrink: 0;
-  width: 30px;
-}
-
-.modal_search .icon img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.modal_search input {
-  background-color: #eee;
-  border: none;
-  border-bottom: 1px solid #808080;
-}
-
 header#modal-search___BV_modal_header_ {
   border-bottom: none;
 }
+
 div#modal-search___BV_modal_content_ {
   background-color: #eee;
   border:none;
@@ -119,5 +88,96 @@ div#modal-search___BV_modal_content_ {
   border-radius: 0;
 }
 
+.modal-dialog {
+  max-width: 100%!important;
+  margin: 0!important;
+  height: 500px;
+}
 
+.modal_search {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.modal_search .search_cont {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.modal_search .search_cont input {
+  width: 100%;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #eee;
+  border-bottom: 1px solid #808080;
+}
+
+.modal_search .search_cont ul {
+  width: 100%;
+  display: flex;
+}
+
+.modal_search .search_cont ul li:nth-child(1) {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.modal_search .search_cont ul li:nth-child(2) {
+  flex-shrink: 0;
+  width: 30px;
+}
+
+.modal_search .search_cont img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+.modal_search .search_word {
+  display: flex;
+}
+.modal_search .search_word img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  color: #808080;
+  padding-bottom: 3px;
+}
+
+.modal_search .search_word ul h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.modal_search .search_word ul li {
+  color: #808080;
+  font-size: 14px;
+}
+
+.modal_search .search_word ul:nth-child(1) {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.modal_search .search_word ul:nth-child(1) li {
+  line-height: 28px;
+}
+
+.modal_search .search_word ul:nth-child(2) {
+  flex-grow: 1;
+}
+
+.modal_search .search_word ul:nth-child(2) li {
+  border: 1px solid #808080;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.modal_search .search_word ul:nth-child(2) li span {
+  color: #76FF03;
+}
 
