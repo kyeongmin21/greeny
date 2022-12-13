@@ -22,7 +22,11 @@
       </ul>
       <ul class="right_gnb">
         <li @click="modalSearch" v-b-modal.modal-search><img src="/images/svg/search.svg" alt="검색"></li>
-        <li><img src="/images/svg/my.svg" alt="마이페이지"></li>
+        <li>
+          <router-link to="/login">
+            <img src="/images/svg/my.svg" alt="로그인">
+          </router-link>
+        </li>
         <li><img src="/images/svg/noti.svg" alt="알림"></li>
         <li><img src="/images/svg/write.svg" alt="글쓰기"></li>
       </ul>

@@ -160,10 +160,10 @@ p {
   outline-width: 0 !important;
   box-shadow: none !important;
 }
-
+/*
 :active, :hover {
   box-shadow: none !important;
-}
+}*/
 
 /* scrollbar */
 html {
