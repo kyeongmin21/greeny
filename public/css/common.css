@@ -26,6 +26,10 @@ ul {
   border-radius: 0!important;
 }
 
+input[type='text'], input[type='password'] {
+ font-size: 13px;
+}
+
 
 /********************************/
 /********** Header.vue **********/

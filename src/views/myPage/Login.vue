@@ -13,20 +13,23 @@
                                      title="아이디"
                                      name="form.id"
                                      v-model="form.username"
-                                     description=""
                                      autocomplete="off"
                                      placeholder="아이디를 입력해주세요."/>
                 <InputWithValidation rules="required|password"
                                      type="password"
                                      title="비밀번호"
                                      name="form.password"
-                                     v-model="form.password" description="" placeholder="비밀번호를 입력해주세요."/>
+                                     v-model="form.password"
+                                     placeholder="비밀번호를 입력해주세요."/>
+
                 <span class="text-danger"> {{ invalidMessage }}</span>
               </b-form>
             </ValidationObserver>
           </li>
           <li>
-            <label for="auto-login"><input type="checkbox" id="auto-login"> 자동 로그인</label>
+            <label for="auto-login">
+              <input type="checkbox" id="auto-login">자동 로그인
+            </label>
           </li>
           <li>
             <b-button variant="light" @click="login">로그인</b-button>
@@ -85,7 +88,6 @@ export default {
       })
     },
     login() {
-      console.log('로그인!!')
     }
   }
 }
