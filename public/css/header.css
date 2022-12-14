@@ -220,7 +220,6 @@ div#modal-search___BV_modal_content_ {
 
 .login .login_cont .login_input ul li:nth-child(2) {
   width: 100%;
-  cursor: pointer;
   margin-bottom:10px;
   display: flex;
   justify-content: space-between;

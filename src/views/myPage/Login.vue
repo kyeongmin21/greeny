@@ -66,7 +66,7 @@
         <h5>간편 로그인</h5>
         <ul>
           <li><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
-          <li><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
+          <li @click="kakaoLogin"><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
           <li><img src="/images/svg/google.svg" alt="구글로그인"></li>
         </ul>
       </div>
@@ -78,7 +78,7 @@
 <script>
 import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
-
+window.Kakao.init('9a15de5db940f8d66cc86f1878c9915c')
 export default {
   name: "Login",
   components: {
@@ -104,13 +104,32 @@ export default {
     },
     passwordShow() {
       this.togglePassword = !this.togglePassword
-
       if (this.togglePassword) this.$refs.pw.$attrs.type = 'text'
       else this.$refs.pw.$attrs.type = 'password'
-
     },
-    login() {
-    }
+    kakaoLogin() {
+      window.Kakao.Auth.login({
+        scope: 'profile_nickname',
+        success: this.getKakaoAccount
+      })
+    },
+    getKakaoAccount() {
+      window.Kakao.API.request({
+        url: '/v2/user/me',
+        success: res => {
+          console.log('res', res)
+          const kakao_account = res.kakao_account
+          const nickname = kakao_account.profile.nickname
+          console.log('nickname', nickname)
+          console.log('로그인 성공!')
+          window.location.replace('/')
+        },
+        fail: error => {
+          console.log(error)
+        }
+      })
+    },
+
   }
 }
 </script>
