@@ -46,7 +46,7 @@
             </label>
           </li>
           <li>
-            <b-button variant="light" @click="login">로그인</b-button>
+            <b-button variant="light" >로그인</b-button>
           </li>
         </ul>
       </div>
@@ -69,6 +69,11 @@
           <li @click="kakaoLogin"><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
           <li><img src="/images/svg/google.svg" alt="구글로그인"></li>
         </ul>
+        <ul>
+          <li @click="kakaoLogout">
+            카카오 로그아웃
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -78,6 +83,7 @@
 <script>
 import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
+
 window.Kakao.init('9a15de5db940f8d66cc86f1878c9915c')
 export default {
   name: "Login",
@@ -129,7 +135,17 @@ export default {
         }
       })
     },
-
+    kakaoLogout() {
+      window.Kakao.API.request({
+        url: '/v1/user/unlink',
+      })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    },
   }
 }
 </script>
