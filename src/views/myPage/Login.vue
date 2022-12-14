@@ -37,9 +37,9 @@
               </b-form>
             </ValidationObserver>
           </li>
-          <li class="">
+          <li>
             <label for="toggle-pw" @click="passwordShow">
-              <input type="checkbox" id="toggle-pw"> 비밀번호 표시
+              <input type="checkbox" id="toggle-pw" @click="passwordShow"> 비밀번호 표시
             </label>
             <label for="auto-login">
               <input type="checkbox" id="auto-login"> 자동 로그인
