@@ -15,23 +15,34 @@
                                      v-model="form.username"
                                      autocomplete="off"
                                      placeholder="이메일을 입력해주세요."/>
-                <InputWithValidation rules="required|password"
+                <InputWithValidation v-if="togglePassword"
+                                     rules="required|password"
+                                     type="text"
+                                     title="비밀번호"
+                                     name="form.password"
+                                     v-model="form.password"
+                                     autocomplete="off"
+                                     ref="pw"
+                                     placeholder="비밀번호를 입력해주세요."
+                                     style="border: 1px solid blue; position:relative; "/>
+                <InputWithValidation v-else
+                                     rules="required|password"
                                      type="password"
                                      title="비밀번호"
                                      name="form.password"
                                      v-model="form.password"
+                                     autocomplete="off"
+                                     ref="pw"
                                      placeholder="비밀번호를 입력해주세요."/>
-
-                <span class="text-danger"> {{ invalidMessage }}</span>
               </b-form>
             </ValidationObserver>
           </li>
-          <li>
+          <li class="">
+            <label for="toggle-pw" @click="passwordShow">
+              <input type="checkbox" id="toggle-pw"> 비밀번호 표시
+            </label>
             <label for="auto-login">
-              <i class="fa fa-eye fa-lg"></i>
-              <i class="fa fa-angle-right"></i>
-              <font-awesome-icon icon="fa-light fa-eye" />
-              <input type="checkbox" id="auto-login"> ㅋㅋ자동 로그인
+              <input type="checkbox" id="auto-login"> 자동 로그인
             </label>
           </li>
           <li>
@@ -81,7 +92,8 @@ export default {
         password: ''
       },
       form: {},
-      invalidMessage: ''
+      invalidMessage: '',
+      togglePassword: false,
     }
   },
   methods: {
@@ -89,6 +101,13 @@ export default {
       requestAnimationFrame(() => {
         this.$refs.observer.reset()
       })
+    },
+    passwordShow() {
+      this.togglePassword = !this.togglePassword
+
+      if (this.togglePassword) this.$refs.pw.$attrs.type = 'text'
+      else this.$refs.pw.$attrs.type = 'password'
+
     },
     login() {
     }
