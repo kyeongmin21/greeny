@@ -65,14 +65,14 @@
       <div class="login_oauth">
         <h5>간편 로그인</h5>
         <ul>
-          <li><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
+          <li id="naverIdLogin"><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
           <li @click="kakaoLogin"><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
           <li><img src="/images/svg/google.svg" alt="구글로그인"></li>
         </ul>
         <ul>
-          <li @click="kakaoLogout">
-            카카오 로그아웃
-          </li>
+          <li @click="naverLogout">네이버 로그아웃</li>
+          <li @click="kakaoLogout">카카오 로그아웃</li>
+          <li @click="googleLogout">구글 로그아웃</li>
         </ul>
       </div>
     </div>
@@ -83,8 +83,8 @@
 <script>
 import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
-
 window.Kakao.init('9a15de5db940f8d66cc86f1878c9915c')
+
 export default {
   name: "Login",
   components: {
@@ -100,7 +100,31 @@ export default {
       form: {},
       invalidMessage: '',
       togglePassword: false,
+      naverLogin: null,
     }
+  },
+  mounted () {
+    this.naverLogin = new window.naver.LoginWithNaverId({
+      clientId: 'EInqwV8yZaaAV_Y685W8',
+      callbackUrl: "http://localhost:8080",
+      isPopup: false,
+      callbackHandle: true,
+      loginButton: { color: 'green', type: 2, height: 40 },
+    })
+    this.naverLogin.init()
+
+    this.naverLogin.getLoginStatus((status) => {
+      if (status) {
+        const email = this.naverLogin.user.getEmail()
+        if (email === undefined || email === null) {
+          console.log('이메일은 필수정보 입니다.')
+          this.naverLogin.reprompt()
+          return
+        } else {
+          console.log('callback 처리에 실패하였습니다.')
+        }
+      }
+    })
   },
   methods: {
     resetForm() {
@@ -113,6 +137,7 @@ export default {
       if (this.togglePassword) this.$refs.pw.$attrs.type = 'text'
       else this.$refs.pw.$attrs.type = 'password'
     },
+
     kakaoLogin() {
       window.Kakao.Auth.login({
         scope: 'profile_nickname',
@@ -123,29 +148,23 @@ export default {
       window.Kakao.API.request({
         url: '/v2/user/me',
         success: res => {
-          console.log('res', res)
           const kakao_account = res.kakao_account
           const nickname = kakao_account.profile.nickname
           console.log('nickname', nickname)
-          console.log('로그인 성공!')
           window.location.replace('/')
         },
-        fail: error => {
-          console.log(error)
-        }
       })
     },
     kakaoLogout() {
-      window.Kakao.API.request({
-        url: '/v1/user/unlink',
-      })
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      window.Kakao.API.request({url: '/v1/user/unlink'})
     },
+    naverLogout() {
+      localStorage.clear();
+      window.location.replace('/')
+    },
+    googleLogout() {
+
+    }
   }
 }
 </script>
