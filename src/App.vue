@@ -1,22 +1,19 @@
 <template>
   <div id="app">
-    <Header />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-    <Footer />
+    <the-layout>
+      <div id="nav">
+        <router-view/>
+      </div>
+    </the-layout>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import TheLayout from "@/layouts/Thelayout";
+
 export default {
   components: {
-    Header,
-    Footer
+    TheLayout
   }
 }
 </script>
