@@ -9,31 +9,43 @@
             <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
               <b-form @submit.prevent="passes(onSubmit);" @reset="resetForm" class=" ">
                 <InputWithValidation rules="required|email"
-                                     type="text"
-                                     title="아이디"
+                                     type="email"
+                                     title="이메일"
                                      name="form.id"
                                      v-model="form.username"
                                      autocomplete="off"
-                                     placeholder="아이디를 입력해주세요."/>
-                <InputWithValidation rules="required|password"
+                                     placeholder="이메일을 입력해주세요."/>
+                <InputWithValidation v-if="togglePassword"
+                                     rules="required|password"
+                                     type="text"
+                                     title="비밀번호"
+                                     name="form.password"
+                                     v-model="form.password"
+                                     autocomplete="off"
+                                     ref="pw"
+                                     placeholder="비밀번호를 입력해주세요."
+                                     style="border: 1px solid blue; position:relative; "/>
+                <InputWithValidation v-else
+                                     rules="required|password"
                                      type="password"
                                      title="비밀번호"
                                      name="form.password"
                                      v-model="form.password"
+                                     autocomplete="off"
+                                     ref="pw"
                                      placeholder="비밀번호를 입력해주세요."/>
-
-                <span class="text-danger"> {{ invalidMessage }}</span>
               </b-form>
             </ValidationObserver>
           </li>
           <li>
+            <label for="toggle-pw" @click="passwordShow">
+              <input type="checkbox" id="toggle-pw" @click="passwordShow"> 비밀번호 표시
+            </label>
             <label for="auto-login">
-              <input type="checkbox" id="auto-login">자동 로그인
+              <input type="checkbox" id="auto-login"> 자동 로그인
             </label>
           </li>
-          <li>
-            <b-button variant="light" @click="login">로그인</b-button>
-          </li>
+          <li><b-button variant="light" >로그인</b-button></li>
         </ul>
       </div>
 
@@ -51,9 +63,14 @@
       <div class="login_oauth">
         <h5>간편 로그인</h5>
         <ul>
-          <li><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
-          <li><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
-          <li><img src="/images/svg/google.svg" alt="구글로그인"></li>
+          <li id="naverIdLogin"><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
+          <li @click="kakaoLogin"><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
+          <li id="google-signin"><img src="/images/svg/google.svg" alt="구글로그인"></li>
+        </ul>
+        <ul>
+          <li @click="naverLogout">네이버 로그아웃</li>
+          <li @click="kakaoLogout">카카오 로그아웃</li>
+          <li @click="googleLogout">구글 로그아웃</li>
         </ul>
       </div>
     </div>
@@ -64,12 +81,13 @@
 <script>
 import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
+window.Kakao.init('9a15de5db940f8d66cc86f1878c9915c')
 
 export default {
   name: "Login",
   components: {
     ValidationObserver,
-    InputWithValidation,
+    InputWithValidation
   },
   data() {
     return {
@@ -78,8 +96,35 @@ export default {
         password: ''
       },
       form: {},
-      invalidMessage: ''
+      invalidMessage: '',
+      togglePassword: false,
+      naverLogin: null,
     }
+  },
+  mounted () {
+    window.gapi.signin2.render('google-signin', {onsuccess: this.onSignIn})
+
+    this.naverLogin = new window.naver.LoginWithNaverId({
+      clientId: 'EInqwV8yZaaAV_Y685W8',
+      callbackUrl: "http://localhost:8080",
+      isPopup: false,
+      callbackHandle: true,
+      loginButton: { color: 'green', type: 1, height: 40 },
+    })
+    this.naverLogin.init()
+
+    this.naverLogin.getLoginStatus((status) => {
+      if (status) {
+        const email = this.naverLogin.user.getEmail()
+        if (email === undefined || email === null) {
+          console.log('이메일은 필수정보 입니다.')
+          this.naverLogin.reprompt()
+          return
+        } else {
+          console.log('callback 처리에 실패하였습니다.')
+        }
+      }
+    })
   },
   methods: {
     resetForm() {
@@ -87,8 +132,50 @@ export default {
         this.$refs.observer.reset()
       })
     },
-    login() {
-    }
+    passwordShow() {
+      this.togglePassword = !this.togglePassword
+      if (this.togglePassword) this.$refs.pw.$attrs.type = 'text'
+      else this.$refs.pw.$attrs.type = 'password'
+    },
+
+    kakaoLogin() {
+      window.Kakao.Auth.login({
+        scope: 'profile_nickname',
+        success: this.getKakaoAccount
+      })
+    },
+    getKakaoAccount() {
+      window.Kakao.API.request({
+        url: '/v2/user/me',
+        success: res => {
+          const kakao_account = res.kakao_account
+          const nickname = kakao_account.profile.nickname
+          console.log('nickname', nickname)
+          window.location.replace('/')
+        },
+      })
+    },
+    kakaoLogout() {
+      window.Kakao.API.request({url: '/v1/user/unlink'})
+    },
+    naverLogout() {
+      localStorage.clear();
+      window.location.replace('/')
+    },
+    onSignIn(googleUser) {
+      const profile = googleUser.getBasicProfile()
+      console.log('ID: ' + profile.getId())
+      console.log('Full Name: ' + profile.getName())
+      console.log('Given Name: ' + profile.getGivenName())
+      console.log('Family Name: ' + profile.getFamilyName())
+      console.log('Image URL: ' + profile.getImageUrl())
+      console.log('Email: ' + profile.getEmail())
+      const idToken = googleUser.getAuthResponse().id_token
+      console.log('ID Token: ' + idToken)
+    },
+    googleLogout() {
+      window.gapi.auth2.getAuthInstance().disconnect()
+    },
   }
 }
 </script>

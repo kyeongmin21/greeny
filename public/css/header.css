@@ -209,21 +209,20 @@ div#modal-search___BV_modal_content_ {
 }
 
 .login .login_cont .login_input ul li input[type="email"],
-.login .login_cont .login_input ul li input[type="password"]{
+.login .login_cont .login_input ul li input[type="text"],
+.login .login_cont .login_input ul li input[type="password"] {
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
-  padding: 5px;
   color: #808080;
   border: 1px solid #808080;
 }
 
+
 .login .login_cont .login_input ul li:nth-child(2) {
   width: 100%;
-  text-align: right;
-  cursor: pointer;
-  float: right;
   margin-bottom:10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .login .login_cont .login_input ul li .btn-light {
@@ -292,4 +291,6 @@ div#modal-search___BV_modal_content_ {
 
 .login .login_cont input:focus {
   border:1px solid #76FF03!important;
+
 }
+

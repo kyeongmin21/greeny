@@ -26,10 +26,13 @@ ul {
   border-radius: 0!important;
 }
 
-input[type='text'], input[type='password'] {
+input[type='text'], input[type='email'], input[type='password'] {
  font-size: 13px;
 }
 
+input[type=checkbox], input[type=radio] {
+  margin-bottom: 5px;
+}
 
 /********************************/
 /********** Header.vue **********/

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^2.0.9",
+    "axios": "^1.2.1",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.6.5",
     "swiper": "^5.4.5",
