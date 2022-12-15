@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import MyPage from '@/router/path.my-page'
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,9 +10,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta: {
-      layout: 'HomeLayout'
-    },
   },
   {
     path: '/challenge',

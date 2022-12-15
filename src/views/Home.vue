@@ -1,10 +1,5 @@
 <template>
   <div class="home">
-
-    <div class="logo">
-      <img src="/images/svg/logo_white.svg" alt="로고">
-    </div>
-
     <div class="banner_wrap">
       <swiper class="swiper" :options="swiperOption" >
         <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
