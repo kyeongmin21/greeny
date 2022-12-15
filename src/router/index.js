@@ -11,9 +11,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta: {
-      layout: 'HomeLayout'
-    },
   },
   {
     path: '/challenge',

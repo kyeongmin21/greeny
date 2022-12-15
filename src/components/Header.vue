@@ -7,7 +7,7 @@
     </ul>
     <ul class="gnb">
       <li>
-        <router-link to="/challenge"><a href="" >CHALLENGE</a></router-link>
+        <router-link to="/challenge"><a href="">CHALLENGE</a></router-link>
       </li>
       <li>
         <router-link to="/magazine"><a href="">MAGAZINE</a></router-link>
@@ -21,7 +21,9 @@
     </ul>
     <ul class="right_gnb">
       <li @click="modalSearch" v-b-modal.modal-search><img src="/images/svg/search.svg" alt="검색"></li>
-      <li><img src="/images/svg/my.svg" alt="마이페이지"></li>
+      <li>
+        <router-link to="/login"><img src="/images/svg/my.svg" alt="마이페이지"></router-link>
+      </li>
       <li><img src="/images/svg/noti.svg" alt="알림"></li>
       <li><img src="/images/svg/write.svg" alt="글쓰기"></li>
     </ul>
@@ -35,6 +37,7 @@
 
 <script>
 import ModalSearch from "@/components/modal/ModalSearch";
+
 export default {
   name: "Header",
   components: {
@@ -59,7 +62,7 @@ export default {
       }
     },
     goTop() {
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
+      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     },
     modalSearch() {
       this.$nextTick(() => {
