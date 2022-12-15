@@ -6,7 +6,7 @@ const addRoute =
     component: () => import(/* webpackChunkName: "myPageMain" */ '@/views/myPage/Main'),
     children: [
       {
-        path: '/login',
+        path: 'login',
         name: 'Login',
         prop: true,
         meta: {layout: 'NoneLayout'},
