@@ -58,7 +58,9 @@
           <li>비밀번호 찾기</li>
         </ul>
         <ul>
-          <li>회원가입</li>
+          <li>
+            <router-link to="/join"><a href="">회원가입</a></router-link>
+          </li>
         </ul>
       </div>
 

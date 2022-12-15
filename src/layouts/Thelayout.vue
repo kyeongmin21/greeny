@@ -1,8 +1,6 @@
 <template>
   <component :is="layout">
-    <div>
-      <slot/>
-    </div>
+    <slot/>
   </component>
 </template>
 
@@ -13,6 +11,7 @@ export default {
   computed: {
     layout () {
       const layout =  this.$route.meta.layout || 'DefaultLayout'
+      console.log(layout)
       return () => import(`@/layouts/${layout}.vue`)
     }
   }
