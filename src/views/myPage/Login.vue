@@ -45,7 +45,9 @@
               <input type="checkbox" id="auto-login"> 자동 로그인
             </label>
           </li>
-          <li><b-button variant="light" >로그인</b-button></li>
+          <li>
+            <b-button variant="light">로그인</b-button>
+          </li>
         </ul>
       </div>
 
@@ -65,18 +67,17 @@
         <ul>
           <li id="naverIdLogin"><img src="/images/svg/naver.svg" alt="네이버로그인"></li>
           <li @click="kakaoLogin"><img src="/images/svg/kakao.svg" alt="카카오로그인"></li>
-          <li id="google-signin"><img src="/images/svg/google.svg" alt="구글로그인"></li>
         </ul>
         <ul>
-          <li @click="naverLogout">네이버 로그아웃</li>
-          <li @click="kakaoLogout">카카오 로그아웃</li>
-          <li @click="googleLogout">구글 로그아웃</li>
+          <li @click="logout">네이버 로그아웃</li>
+          <li @click="logout">카카오 로그아웃</li>
         </ul>
       </div>
     </div>
 
   </div>
 </template>
+
 
 <script>
 import {ValidationObserver} from 'vee-validate'
@@ -87,7 +88,7 @@ export default {
   name: "Login",
   components: {
     ValidationObserver,
-    InputWithValidation
+    InputWithValidation,
   },
   data() {
     return {
@@ -99,17 +100,16 @@ export default {
       invalidMessage: '',
       togglePassword: false,
       naverLogin: null,
+
     }
   },
-  mounted () {
-    window.gapi.signin2.render('google-signin', {onsuccess: this.onSignIn})
-
+  mounted() {
     this.naverLogin = new window.naver.LoginWithNaverId({
       clientId: 'EInqwV8yZaaAV_Y685W8',
       callbackUrl: "http://localhost:8080",
       isPopup: false,
       callbackHandle: true,
-      loginButton: { color: 'green', type: 1, height: 40 },
+      loginButton: {color: 'green', type: 1, height: 40},
     })
     this.naverLogin.init()
 
@@ -155,26 +155,10 @@ export default {
         },
       })
     },
-    kakaoLogout() {
-      window.Kakao.API.request({url: '/v1/user/unlink'})
-    },
-    naverLogout() {
+    logout() {
       localStorage.clear();
       window.location.replace('/')
-    },
-    onSignIn(googleUser) {
-      const profile = googleUser.getBasicProfile()
-      console.log('ID: ' + profile.getId())
-      console.log('Full Name: ' + profile.getName())
-      console.log('Given Name: ' + profile.getGivenName())
-      console.log('Family Name: ' + profile.getFamilyName())
-      console.log('Image URL: ' + profile.getImageUrl())
-      console.log('Email: ' + profile.getEmail())
-      const idToken = googleUser.getAuthResponse().id_token
-      console.log('ID Token: ' + idToken)
-    },
-    googleLogout() {
-      window.gapi.auth2.getAuthInstance().disconnect()
+      // window.Kakao.API.request({url: '/v1/user/unlink'})
     },
   }
 }
