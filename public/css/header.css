@@ -197,7 +197,6 @@ div#modal-search___BV_modal_content_ {
 
 .login .login_cont {
   width: 400px;
-  height: 500px;
 }
 
 .login .login_cont .login_input h3,
@@ -299,7 +298,6 @@ div#modal-search___BV_modal_content_ {
 /********************************/
 .join .join_cont {
   width: 400px;
-  height: 600px;
 }
 
 .join .btn_wrap {
@@ -315,15 +313,30 @@ div#modal-search___BV_modal_content_ {
   flex: 2;
 }
 
-.join .agreement {
+.join .agreement_wrap {
+  margin: 40px 0;
+}
+
+.join .agreement_wrap .agreement {
   padding: 20px;
-  margin: 20px 0;
   border: 1px solid #808080;
 }
-.join .agreement ul li label {
+
+.join .agreement_wrap .agreement ul li label {
   margin:5px;
 }
 
-.join .agreement ul li span {
+.join .agreement_wrap .agreement ul li span {
   color: #76FF03;
+}
+
+.join .agreement_wrap #all-agree {
+  margin-right: 5px;
+}
+
+.join .agreement_wrap p {
+  color: #808080;
+  margin-top: 5px;
+  text-align: right;
+  text-decoration: underline;
 }
