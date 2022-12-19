@@ -14,31 +14,29 @@
                                      v-model="form.username"
                                      autocomplete="off"
                                      placeholder="이메일을 입력해주세요."/>
-                <InputWithValidation
-                  rules="required|password"
-                  type="text"
-                  title="비밀번호"
-                  name="form.password"
-                  v-model="form.password"
-                  autocomplete="off"
-                  ref="pw"
-                  placeholder="비밀번호(8-20자 이내, 영문, 숫자 포함)"/>
-                <InputWithValidation
-                  rules="required|password"
-                  type="password"
-                  title="비밀번호"
-                  name="form.password"
-                  v-model="form.password"
-                  autocomplete="off"
-                  ref="pw"
-                  placeholder="비밀번호 확인"/>
-                <InputWithValidation rules="required|email"
-                                     type="email"
-                                     title="이메일"
-                                     name="form.id"
-                                     v-model="form.username"
+                <InputWithValidation rules="required|password"
+                                     type="text"
+                                     title="비밀번호"
+                                     name="form.password"
+                                     v-model="form.password"
                                      autocomplete="off"
-                                     placeholder="닉네임을 입력해주세요."/>
+                                     ref="pw"
+                                     placeholder="비밀번호(8-20자 이내, 영문, 숫자 포함)"/>
+                <InputWithValidation rules="required|password"
+                                     type="password"
+                                     title="비밀번호"
+                                     name="form.password"
+                                     v-model="form.password"
+                                     autocomplete="off"
+                                     ref="pw"
+                                     placeholder="비밀번호 확인"/>
+                <InputWithValidation rules="required|nickname"
+                                     type="text"
+                                     title="닉네임"
+                                     name="form.id"
+                                     v-model="form.nickname"
+                                     autocomplete="off"
+                                     placeholder="닉네임 (2-14자이내, 한글, 영문, 숫자 포함)"/>
               </b-form>
             </ValidationObserver>
           </li>
@@ -96,7 +94,8 @@ export default {
     return {
       form_: {
         username: '',
-        password: ''
+        password: '',
+        nickname: '',
       },
       form: {},
       invalidMessage: '',

@@ -5,11 +5,13 @@
         <b-tab title="최신순" active>
           <ul>
             <li>
-              <span></span>
-              <img src="/images/challenge/challenge_01.jpg" alt="챌린지이미지1">
-              <h3>챌린지 제목</h3>
-              <p>챌린지 내용을 입력하는 자리입니다. 챌린지 내용을 입력하는 자리입니다.</p>
-              <p class="mt05"><b>~2022.11.25</b></p>
+              <router-link to="/challenge/detail">
+                <span></span>
+                <img src="/images/challenge/challenge_01.jpg" alt="챌린지이미지1">
+                <h3>챌린지 제목</h3>
+                <p>챌린지 내용을 입력하는 자리입니다. 챌린지 내용을 입력하는 자리입니다.</p>
+                <p class="mt05"><b>~2022.11.25</b></p>
+              </router-link>
               <div class="icon_wrap">
                 <img class="heart" src="/images/svg/heart.svg" alt="하트아이콘">
                 <img class="bookmark" src="/images/svg/bookmark.svg" alt="북마크아이콘">

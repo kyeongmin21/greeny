@@ -10,6 +10,12 @@ const addRoute =
         prop: true,
         component: () => import(/* webpackChunkName: "challengeList" */ '@/views/challenge/List'),
       },
+      {
+        path: 'challenge/detail',
+        name: 'ChallengeDetail',
+        prop: true,
+        component: () => import(/* webpackChunkName: "challengeDetail" */ '@/views/challenge/Detail'),
+      },
     ]
   }
 export default addRoute
