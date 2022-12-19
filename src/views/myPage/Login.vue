@@ -37,12 +37,16 @@
             </ValidationObserver>
           </li>
           <li>
-            <label for="toggle-pw" @click="passwordShow">
-              <input type="checkbox" id="toggle-pw" @click="passwordShow"> 비밀번호 표시
-            </label>
-            <label for="auto-login">
-              <input type="checkbox" id="auto-login"> 자동 로그인
-            </label>
+            <div>
+              <input type="checkbox"
+                     id="pw-toggle"
+                     @change="passwordShow">
+              <label @click.prevent="passwordShow" for="pw-toggle" class="ml05"> 비밀번호 표시</label>
+            </div>
+            <div>
+              <input type="checkbox" id="auto-login">
+              <label for="auto-login" class="ml05">자동 로그인</label>
+            </div>
           </li>
           <li>
             <b-button variant="light">로그인</b-button>
@@ -83,6 +87,7 @@
 <script>
 import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
+
 window.Kakao.init('9a15de5db940f8d66cc86f1878c9915c')
 
 export default {
@@ -133,11 +138,17 @@ export default {
       })
     },
     passwordShow() {
+      const pw = document.getElementById('pw-toggle')
       this.togglePassword = !this.togglePassword
-      if (this.togglePassword) this.$refs.pw.$attrs.type = 'text'
-      else this.$refs.pw.$attrs.type = 'password'
-    },
 
+      if (this.togglePassword) {
+        this.$refs.pw.$attrs.type = 'text'
+        pw.checked = true
+      } else {
+        this.$refs.pw.$attrs.type = 'password'
+        pw.checked = false
+      }
+    },
     kakaoLogin() {
       window.Kakao.Auth.login({
         scope: 'profile_nickname',
