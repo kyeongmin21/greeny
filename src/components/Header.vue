@@ -7,7 +7,7 @@
     </ul>
     <ul class="gnb">
       <li>
-        <router-link to="/challenge/list"><a href="">CHALLENGE</a></router-link>
+        <router-link to="/challenge"><a href="">CHALLENGE</a></router-link>
       </li>
       <li>
         <router-link to="/magazine"><a href="">MAGAZINE</a></router-link>

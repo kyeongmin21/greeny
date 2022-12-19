@@ -5,10 +5,10 @@ const addRoute =
     component: () => import(/* webpackChunkName: "challengeMain" */ '@/views/challenge/Main'),
     children: [
       {
-        path: 'challenge/list',
+        path: 'challenge',
         name: 'ChallengeList',
         prop: true,
-        component: () => import(/* webpackChunkName: "challengeList" */ '@/views/challenge/ChallengeList'),
+        component: () => import(/* webpackChunkName: "challengeList" */ '@/views/challenge/List'),
       },
     ]
   }

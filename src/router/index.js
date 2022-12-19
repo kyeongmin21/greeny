@@ -13,11 +13,6 @@ const routes = [
     component: Home,
   },
   {
-    path: '/challenge',
-    name: 'Challenge',
-    component: () => import(/* webpackChunkName: "challenge" */ '@/views/challenge/ChallengeList.vue'),
-  },
-  {
     path: '/magazine',
     name: 'Magazine',
     component: () => import(/* webpackChunkName: "magazine" */ '@/views/magazine/List.vue')
