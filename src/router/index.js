@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import MyPage from './path.my-page'
+import Challenge from './path.challenge'
 
 Vue.use(VueRouter)
 
@@ -14,7 +15,7 @@ const routes = [
   {
     path: '/challenge',
     name: 'Challenge',
-    component: () => import(/* webpackChunkName: "challenge" */ '@/views/challenge/List.vue'),
+    component: () => import(/* webpackChunkName: "challenge" */ '@/views/challenge/ChallengeList.vue'),
   },
   {
     path: '/magazine',
@@ -47,5 +48,6 @@ const router = new VueRouter({
 
 
 router.addRoute(MyPage)
+router.addRoute(Challenge)
 
 export default router
