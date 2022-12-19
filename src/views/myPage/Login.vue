@@ -23,8 +23,7 @@
                                      v-model="form.password"
                                      autocomplete="off"
                                      ref="pw"
-                                     placeholder="비밀번호를 입력해주세요."
-                                     style="border: 1px solid blue; position:relative; "/>
+                                     placeholder="비밀번호를 입력해주세요."/>
                 <InputWithValidation v-else
                                      rules="required|password"
                                      type="password"
@@ -102,7 +101,6 @@ export default {
       invalidMessage: '',
       togglePassword: false,
       naverLogin: null,
-
     }
   },
   mounted() {

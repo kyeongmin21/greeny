@@ -187,7 +187,7 @@ div#modal-search___BV_modal_content_ {
 /********************************/
 /********** Login.vue ***********/
 /********************************/
-.login {
+.login, .join {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -200,7 +200,8 @@ div#modal-search___BV_modal_content_ {
   height: 500px;
 }
 
-.login .login_cont .login_input h3 {
+.login .login_cont .login_input h3,
+.join .join_cont .join_input h3 {
   border-bottom: 2px solid #212121;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -291,6 +292,38 @@ div#modal-search___BV_modal_content_ {
 
 .login .login_cont input:focus {
   border:1px solid #76FF03!important;
-
 }
 
+/********************************/
+/*********** Join.vue ***********/
+/********************************/
+.join .join_cont {
+  width: 400px;
+  height: 600px;
+}
+
+.join .btn_wrap {
+  display: flex;
+}
+
+.join .btn_wrap .btn-outline-secondary {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.join .btn_wrap .btn-secondary {
+  flex: 2;
+}
+
+.join .agreement {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #808080;
+}
+.join .agreement ul li label {
+  margin:5px;
+}
+
+.join .agreement ul li span {
+  color: #76FF03;
+}
