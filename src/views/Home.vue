@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <div class="banner_wrap">
+<!--    <div class="banner_wrap">
       <swiper class="swiper" :options="swiperOption" >
         <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
         <swiper-slide><img src="/images/home/top_banner02.png" alt="메인배너2"></swiper-slide>
         <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
-        <!-- pagination -->
+        &lt;!&ndash; pagination &ndash;&gt;
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
 
@@ -160,21 +160,21 @@
           </ul>
         </div>
       </section>
-    </div>
+    </div>-->
 
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
   name: 'Home',
-  components:	{
+/*  components:	{
     Swiper,
     SwiperSlide
-  },
+  },*/
   data() {
     return{
       swiperOption: {

@@ -61,7 +61,7 @@ extend('password', (value) => {
 
 // 한글, 영문, 숫자만 가능하게
 extend('nickname', (value) => {
-  const pattern = /^(?=.*[a-zA-Z가-힣])[-a-zA-Z0-9가-힣]{2,14}$/;
+  const pattern = /^(?=.*[a-zA-Z가-힣])[-a-zA-Z0-9가-힣]{1,14}$/;
   if (!pattern.test(value)) {
     return '닉네임을 올바르게 입력해주세요.'
   }

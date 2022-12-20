@@ -36,7 +36,7 @@
                                      name="form.id"
                                      v-model="form.nickname"
                                      autocomplete="off"
-                                     placeholder="닉네임 (2-14자이내, 한글, 영문, 숫자 포함)"/>
+                                     placeholder="닉네임 (1-14자이내, 한글, 영문, 숫자 포함)"/>
               </b-form>
             </ValidationObserver>
           </li>
