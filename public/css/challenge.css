@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import "reset.css";
+
+.challenge_list .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-radius: 0;
+  color: #fff!important;
+  border: 1px solid #212121!important;
+  background-color: #212121!important;
+}
+
+.challenge_list .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-radius: 0;
+  border: 1px solid #212121!important;
+}
+
+.challenge_list .nav-tabs .nav-link {
+  border-radius: 0;
+  border: 1px solid #212121!important;
+}
+
+.challenge_list {
+  height: 100%;
+  padding-bottom: 300px;
+}
+
+.challenge_list section {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.challenge_list .nav-tabs {
+  border: none;
+  display: flex;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+
+.challenge_list section .tab-pane ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge_list section .tab-pane ul li {
+  flex: 1 1 25%;
+  padding: 0 10px;
+  margin-bottom: 3rem;
+}
+.challenge_list section .tab-pane ul li h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0.7rem;
+}
+
+.challenge_list section .tab-pane ul li span {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  border-top: 1px solid #212121;
+}
+
+.challenge_list section .tab-pane ul li .icon_wrap {
+  display: flex;
+  margin-top: 10px;
+}
+
+
+.challenge_list section .tab-pane ul li .icon_wrap img {
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}

@@ -1,32 +1,24 @@
 <template>
   <div class="header">
-    <ul class="left_gnb">
+    <ul class="hamburger" v-b-toggle.my-sidebar>
+      <img src="/images/svg/symbol.svg" alt="모바일햄버거버튼">
+    </ul>
+    <b-sidebar id="my-sidebar" shadow>
+      <div class="px-3 py-2">
+        <Menu/>
+        <Category/>
+      </div>
+    </b-sidebar>
+
+    <ul class="navbar_logo">
       <li>
         <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
     </ul>
-    <ul class="gnb">
-      <li>
-        <router-link to="/challenge/list"><a href="">CHALLENGE</a></router-link>
-      </li>
-      <li>
-        <router-link to="/magazine"><a href="">MAGAZINE</a></router-link>
-      </li>
-      <li>
-        <router-link to="/dailylook"><a href="">DAILYLOOK</a></router-link>
-      </li>
-      <li>
-        <router-link to="/event"><a href="">EVENT</a></router-link>
-      </li>
-    </ul>
-    <ul class="right_gnb">
-      <li @click="modalSearch" v-b-modal.modal-search><img src="/images/svg/search.svg" alt="검색"></li>
-      <li>
-        <router-link to="/login"><img src="/images/svg/my.svg" alt="마이페이지"></router-link>
-      </li>
-      <li><img src="/images/svg/noti.svg" alt="알림"></li>
-      <li><img src="/images/svg/write.svg" alt="글쓰기"></li>
-    </ul>
+
+    <Category/>
+    <Menu/>
+
     <div class="top_btn" v-show="visible" @click="goTop">
       <img src="/images/svg/top_btn.svg" alt="위로가기버튼">
     </div>
@@ -37,10 +29,14 @@
 
 <script>
 import ModalSearch from "@/components/modal/ModalSearch";
+import Category from "@/components/Category";
+import Menu from "@/components/Menu";
 
 export default {
   name: "Header",
   components: {
+    Menu,
+    Category,
     ModalSearch,
   },
   data() {
@@ -64,11 +60,7 @@ export default {
     goTop() {
       window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     },
-    modalSearch() {
-      this.$nextTick(() => {
-        this.modalSearchShow = !this.modalSearchShow;
-      })
-    },
+
   }
 }
 </script>

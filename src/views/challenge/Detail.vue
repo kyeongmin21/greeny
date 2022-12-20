@@ -1,12 +1,12 @@
 <template>
-  <div>
-      <h2>챌린지리스트</h2>
+  <div class="challenge_detail">
+    <h2>디테일</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ChallengeList"
+  name: "List"
 }
 </script>
 
