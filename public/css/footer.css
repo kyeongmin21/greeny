@@ -4,6 +4,7 @@
 body {
   position: relative;
 }
+
 #app {
   min-height: 100%;
   position: relative;
@@ -42,7 +43,7 @@ body {
 
 .footer .footer_wrap ul li {
   font-weight: 600;
-  padding-right:15px;
+  padding-right: 15px;
   font-size: 13px;
   cursor: pointer;
 }
@@ -50,4 +51,58 @@ body {
 .footer .footer_wrap span {
   opacity: 0.5;
   font-size: 12px;
+}
+
+
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    width: 100vw;
+    height: 200px;
+  }
+
+  .footer .footer_wrap {
+    padding-left: 50px;
+  }
+
+  .footer .footer_wrap p {
+    width: 300px;
+  }
+}
+
+
+/* Mobile - Landscape */
+@media (max-width: 480px) {
+  .footer {
+    width: 100vw;
+    height: 200px;
+  }
+
+  .footer .footer_wrap {
+    padding-left: 5px;
+  }
+
+  .footer .footer_wrap p {
+    margin: 20px auto 0;
+    width: 150px;
+  }
+
+  .footer .footer_wrap ul {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .footer .footer_wrap ul li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer .footer_wrap span {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
