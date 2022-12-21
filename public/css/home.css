@@ -4,10 +4,7 @@
 .home {
   width: 100%;
 }
-.home .logo {
-  width: 300px;
-  margin: 15px auto;
-}
+
 .home .swiper {
   width: 100%;
 }
@@ -20,7 +17,11 @@
 }
 
 .home section {
-  margin: 50px auto 150px;
+  margin: 0 auto 100px;
+}
+
+.home section:last-child {
+  margin-bottom: unset;
 }
 
 .home section:last-child {
@@ -48,11 +49,6 @@
 .home section .best_challenge {
   width: 60%;
   margin: 0 auto;
-}
-
-.home section .best_challenge h2 {
-  width: 300px;
-  padding: 15px 0;
 }
 
 .home section .best_challenge ul {
@@ -87,19 +83,18 @@
 }
 
 
-
 /********** 브랜드 **********/
 .home .brand {
-  width: 100%!important;
+  width: 100% !important;
 }
 
-.home .brand h2 {
+.home .title {
   width: 60%;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 }
 
-.home .brand h2 img {
-  width: 150px;
+.home .title h2 {
+  width: 300px;
 }
 
 .home .brand ul {
@@ -108,7 +103,7 @@
 }
 
 .home .brand ul li {
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,15 +138,12 @@
 }
 
 .home .brand .brand_content01 li:nth-child(2) {
-  margin: 0 auto;
-  width: 550px;
+
 }
 
 .home .brand .brand_content02 li:nth-child(1) {
-  width: 550px;
-  margin: 0 auto;
-}
 
+}
 
 
 /********** 데일리룩 **********/
@@ -160,26 +152,18 @@
   margin: 0 auto;
 }
 
-.home .daily_look h2 {
-  width: 220px;
-}
-
 .home .daily_look ul {
-  width: 100%;
   display: flex;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .home .daily_look ul li {
-  width: 25%;
+  flex: 1 1 20%;
   margin: 10px;
   padding-top: 10px;
   border-top: 1px solid #212121;
 }
 
-.home .daily_look ul li:nth-child(1) {
-  margin-left: 0;
-}
 .home .daily_look ul li p {
   font-weight: 800;
   padding: 10px 0;
@@ -194,13 +178,14 @@
 }
 
 
-  /********** 이벤트 **********/
-.home .event  {
+/********** 이벤트 **********/
+.home .event {
   width: 100%;
   height: 300px;
   border-top: 1px solid #212121;
   background-color: #FCFCFC;
 }
+
 .home .event ul {
   margin: 0 auto;
   width: 60%;
@@ -215,3 +200,105 @@
 }
 
 
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+/* Mobile */
+@media only screen and (max-width: 1200px) {
+  .more {
+    width: 130px;
+  }
+
+  .more:hover {
+    width: 130px;
+  }
+
+  .home .title {
+    width: 90%;
+  }
+
+  .home .title h2 {
+    width: 250px;
+  }
+
+  .home section .best_challenge {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .home .daily_look h2 {
+    width: 200px;
+  }
+
+  .home .daily_look {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .home .brand h2 {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .home .event ul {
+    width: 90%;
+  }
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .home .event ul li h3 {
+    font-size: 1.3rem;
+  }
+
+  .home .daily_look ul {
+    width: 100%;
+    display: flex;
+  }
+
+  .home .daily_look ul li {
+    flex: 1 1 40%;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header .hamburger {
+    position: absolute;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .more {
+    width: 100px;
+  }
+
+  .more:hover {
+    width: 100px;
+  }
+
+  .home .title h2 {
+    width: 200px;
+  }
+
+  .home section .best_challenge ul {
+    display: unset;
+  }
+
+  .home section .best_challenge ul li {
+    width: 100%;
+  }
+
+  .home section .best_challenge li p {
+    font-size: 16px;
+  }
+
+  .home .event ul {
+    width: 90%;
+  }
+
+}

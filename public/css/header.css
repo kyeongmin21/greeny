@@ -40,7 +40,6 @@
   position: absolute;
   top: 8px;
   left: 3%;
-  width: 100%;
 }
 
 .header .navbar_logo li {
@@ -355,27 +354,45 @@ div#modal-search___BV_modal_content_ {
   display: block !important;
 }
 
+.b-sidebar { /*햄버거 버튼*/
+  width: 100% !important;
+}
 
 
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
 
 
 @media only screen and (max-width: 1200px) {
-  .header {
-    width: 100vw;
-    border: 1px solid green;
+  #my-sidebar .navbar_cate,
+  #my-sidebar .navbar_menu {
+    display: block !important;
+    text-align: center;
   }
 
+  .header #my-sidebar .navbar_menu {
+    width: 150px;
+    position: absolute;
+    left: 15px;
+  }
+
+  .b-sidebar>.b-sidebar-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header #my-sidebar .navbar_cate {
+    height: 100%;
+  }
 }
 
 
 /* Tablet */
 @media only screen and (max-width: 992px) {
   .header {
-    width: 100vw;
-    border: 1px solid red;
     padding: 7px 30px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .header .hamburger {
@@ -383,10 +400,8 @@ div#modal-search___BV_modal_content_ {
     width: 30px;
     height: 30px;
     padding-top: 3px;
-  }
-
-  .header .navbar_logo {
-    position: unset;
+    position: absolute;
+    right: 20px;
   }
 
   .header .navbar_logo li {
@@ -396,28 +411,23 @@ div#modal-search___BV_modal_content_ {
   .navbar_cate, .navbar_menu {
     display: none !important;
   }
-
-  #my-sidebar .navbar_cate,
-  #my-sidebar .navbar_menu {
-    display: block !important;
-  }
-
-  .b-sidebar:not(.b-sidebar-right) > .b-sidebar-header .close {
-    margin-left: unset !important;
-  }
-
-  .b-sidebar {
-    width: 100% !important;
-  }
 }
 
 
 /* Mobile - Landscape */
 @media (max-width: 480px) {
   .header {
-    width: 100vw;
     padding: 7px 10px;
-    border: 1px solid blue;
+    box-sizing: border-box;
+  }
+
+  .header .hamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+    position: absolute;
+    right: 20px;
   }
 
   #my-sidebar .navbar_cate,

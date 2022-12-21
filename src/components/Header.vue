@@ -1,20 +1,20 @@
 <template>
   <div class="header">
+    <ul class="navbar_logo">
+      <li>
+        <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
+      </li>
+    </ul>
     <ul class="hamburger" v-b-toggle.my-sidebar>
       <img src="/images/svg/symbol.svg" alt="모바일햄버거버튼">
     </ul>
+
     <b-sidebar id="my-sidebar" shadow>
       <div class="px-3 py-2">
         <Menu/>
         <Category/>
       </div>
     </b-sidebar>
-
-    <ul class="navbar_logo">
-      <li>
-        <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
-      </li>
-    </ul>
 
     <Category/>
     <Menu/>
