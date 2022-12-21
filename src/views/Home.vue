@@ -45,31 +45,35 @@
               <img src="/images/home/home_img03.png" alt="브랜드 이미지1">
             </li>
             <li>
-              <h3><span>Pleuvoir</span></h3>
-              <p>기분 좋은 하루의 끝과 시작</p>
-              <span>
+              <div>
+                <h3><span>Pleuvoir</span></h3>
+                <p>기분 좋은 하루의 끝과 시작</p>
+                <span>
                 ‘쏟아지듯 내리는 비'란 뜻의 플르부아는 계절의 끝과 시작을 알리는 비처럼<br>
                 자연의 향기를 담아요. 플르부아의 베스트 제품을 12월 한 달간 만나볼 수 있어요.<br>
                 플르부아로 기분 좋은 하루의 끝과 시작을 함께하세요.
               </span>
-              <router-link to="/brand">
-                <div class="more"></div>
-              </router-link>
+                <router-link to="/brand">
+                  <div class="more"></div>
+                </router-link>
+              </div>
             </li>
           </ul>
 
           <ul class="brand_content02">
             <li>
-              <h3><span>톤28</span></h3>
-              <p>아낌없이, 원재료 그대로</p>
-              <span>
+              <div>
+                <h3><span>톤28</span></h3>
+                <p>아낌없이, 원재료 그대로</p>
+                <span>
                 제절 원료를 그때그때 따서 소량 신선하게 생산하고 없는 재료는
                 가장 좋은 성분을 선정하여 거짓 없이 단단히 사용하고 있습니다.
                 평균 플라스틱 용기 대비 90%까지 플라스틱 사용량을 줄였습니다.
               </span>
-              <router-link to="/brand">
-                <div class="more"></div>
-              </router-link>
+                <router-link to="/brand">
+                  <div class="more"></div>
+                </router-link>
+              </div>
             </li>
             <li>
               <img src="/images/home/home_img04.png" alt="브랜드 이미지2">
@@ -77,8 +81,6 @@
           </ul>
         </div>
       </section>
-
-
 
 
       <div class="title">

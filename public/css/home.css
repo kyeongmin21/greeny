@@ -104,20 +104,23 @@
 
 .home .brand ul li {
   flex: 1;
-
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .home .brand ul li p {
   font-weight: 700;
   font-size: 1.2rem;
-  padding: 10px 0 30px;
+  padding: 10px 0;
 }
 
 .home .brand ul li span {
   line-height: 24px;
+}
+
+.home .brand ul li > div {
+  width: 450px;
 }
 
 .home .brand .brand_content01 {
