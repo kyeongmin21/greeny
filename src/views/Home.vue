@@ -1,38 +1,45 @@
 <template>
   <div class="home">
-<!--    <div class="banner_wrap">
-      <swiper class="swiper" :options="swiperOption" >
+    <div class="banner_wrap">
+      <swiper class="swiper" :options="swiperOption">
         <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
         <swiper-slide><img src="/images/home/top_banner02.png" alt="메인배너2"></swiper-slide>
         <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
-        &lt;!&ndash; pagination &ndash;&gt;
+        <!-- pagination -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
 
-    <section>
-      <div class="best_challenge">
+
+      <div class="title mt50">
         <h2><img src="/images/svg/home_title01.svg" alt="챌린지 타이틀"></h2>
-        <ul>
-          <li>
-            <img src="/images/home/home_img01.png" alt="챌린지 이미지1">
-            <p><b>[한달나기] 블랙 코트 하나로 일주일 코디하기</b></p>
-            <span>자꾸자꾸 손이 가는 겨울 데일리 아이템! 블랙 코트로 스타일링 꿀!팁!</span>
-          </li>
-          <li>
-            <img src="/images/home/home_img02.png" alt="챌린지 이미지2">
-            <p><b>[일주일챌린지] 최애 카페에서 텀블러 이용해서 할인받고 선물도 받기</b></p>
-            <span>최애 카페에서 제공하는 텀블러 이벤트에 참여해서 할인도 받고 선물도...</span>
-          </li>
-        </ul>
-        <router-link to="/challenge">
-          <div class="more"></div>
-        </router-link>
       </div>
-    </section>
 
       <section>
+        <div class="best_challenge">
+          <ul>
+            <li class="mb30">
+              <img src="/images/home/home_img01.png" alt="챌린지 이미지1">
+              <p><b>[한달나기] 블랙 코트 하나로 일주일 코디하기</b></p>
+              <span>자꾸자꾸 손이 가는 겨울 데일리 아이템! 블랙 코트로 스타일링 꿀!팁!</span>
+            </li>
+            <li>
+              <img src="/images/home/home_img02.png" alt="챌린지 이미지2">
+              <p><b>[일주일챌린지] 최애 카페에서 텀블러 이용해서 할인받고 선물도 받기</b></p>
+              <span>최애 카페에서 제공하는 텀블러 이벤트에 참여해서 할인도 받고 선물도...</span>
+            </li>
+          </ul>
+          <router-link to="/challenge">
+            <div class="more"></div>
+          </router-link>
+        </div>
+      </section>
+
+
+      <div class="title">
+        <h2><img src="/images/svg/home_title02.png" alt="브랜드 타이틀"></h2>
+      </div>
+      <section>
         <div class="brand">
-          <h2><img src="/images/svg/home_title02.svg" alt="브랜드 타이틀"></h2>
           <ul class="brand_content01">
             <li>
               <img src="/images/home/home_img03.png" alt="브랜드 이미지1">
@@ -50,6 +57,7 @@
               </router-link>
             </li>
           </ul>
+
           <ul class="brand_content02">
             <li>
               <h3><span>톤28</span></h3>
@@ -70,9 +78,14 @@
         </div>
       </section>
 
+
+
+
+      <div class="title">
+        <h2><img src="/images/svg/home_title03.png" alt="브랜드 타이틀"></h2>
+      </div>
       <section>
         <div class="daily_look">
-          <h2><img src="/images/svg/home_title03.svg" alt="브랜드 타이틀"></h2>
           <ul>
             <li>
               <img src="/images/home/home_daily01.png" alt="">
@@ -106,8 +119,6 @@
                 <span>USERNAME</span>
               </p>
             </li>
-          </ul>
-          <ul>
             <li>
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
@@ -141,6 +152,7 @@
               </p>
             </li>
           </ul>
+
           <router-link to="/dailyLook">
             <div class="more"></div>
           </router-link>
@@ -160,23 +172,23 @@
           </ul>
         </div>
       </section>
-    </div>-->
+    </div>
 
   </div>
 </template>
 
 <script>
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import {Swiper, SwiperSlide} from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
   name: 'Home',
-/*  components:	{
+  components: {
     Swiper,
     SwiperSlide
-  },*/
+  },
   data() {
-    return{
+    return {
       swiperOption: {
         loop: true,
         spaceBetween: 0,

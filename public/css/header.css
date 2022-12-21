@@ -365,33 +365,10 @@ div#modal-search___BV_modal_content_ {
 
 
 @media only screen and (max-width: 1200px) {
-  .header {
-    width: 100vw;
-    border: 1px solid green;
-  }
-
   #my-sidebar .navbar_cate,
   #my-sidebar .navbar_menu {
     display: block !important;
     text-align: center;
-  }
-}
-
-
-/* Tablet */
-@media only screen and (max-width: 992px) {
-  .header {
-    width: 100vw;
-    padding: 7px 30px;
-  }
-
-  .header .hamburger {
-    display: block;
-    width: 30px;
-    height: 30px;
-    padding-top: 3px;
-    position: absolute;
-    right: 20px;
   }
 
   .header #my-sidebar .navbar_menu {
@@ -409,6 +386,23 @@ div#modal-search___BV_modal_content_ {
   .header #my-sidebar .navbar_cate {
     height: 100%;
   }
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .header {
+    padding: 7px 30px;
+  }
+
+  .header .hamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+    position: absolute;
+    right: 20px;
+  }
 
   .header .navbar_logo li {
     float: right;
@@ -417,16 +411,23 @@ div#modal-search___BV_modal_content_ {
   .navbar_cate, .navbar_menu {
     display: none !important;
   }
-
 }
 
 
 /* Mobile - Landscape */
 @media (max-width: 480px) {
   .header {
-    width: 100vw;
     padding: 7px 10px;
-    border: 1px solid blue;
+    box-sizing: border-box;
+  }
+
+  .header .hamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+    position: absolute;
+    right: 20px;
   }
 
   #my-sidebar .navbar_cate,

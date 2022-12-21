@@ -28,7 +28,6 @@ html, body {
 
 body {
   position: relative;
-  min-width: 1204px;
   min-height: 100%;
   font-size: 14px;
   font-family: 'Noto Sans KR', sans-serif !important;

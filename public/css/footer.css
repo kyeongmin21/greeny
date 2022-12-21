@@ -50,7 +50,7 @@ body {
 
 .footer .footer_wrap span {
   opacity: 0.5;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 
@@ -59,11 +59,6 @@ body {
 /****************************************************************/
 
 @media only screen and (max-width: 1200px) {
-  .footer {
-    width: 100vw;
-    height: 200px;
-  }
-
   .footer .footer_wrap {
     padding-left: 50px;
   }
@@ -76,17 +71,13 @@ body {
 
 /* Mobile - Landscape */
 @media (max-width: 480px) {
-  .footer {
-    width: 100vw;
-    height: 200px;
-  }
-
   .footer .footer_wrap {
-    padding-left: 5px;
+    width: 90%;
+    padding-left: 0;
+    margin: 0 auto;
   }
 
   .footer .footer_wrap p {
-    margin: 20px auto 0;
     width: 150px;
   }
 
@@ -97,12 +88,10 @@ body {
 
   .footer .footer_wrap ul li {
     display: flex;
-    justify-content: center;
+
   }
 
   .footer .footer_wrap span {
     display: block;
-    text-align: center;
-    margin: 0 auto;
   }
 }
