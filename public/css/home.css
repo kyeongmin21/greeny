@@ -17,7 +17,7 @@
 }
 
 .home section {
-  margin: 0 auto 100px;
+  margin: 0 auto 180px;
 }
 
 .home section:last-child {
@@ -181,6 +181,7 @@
   width: 100%;
   height: 300px;
   border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
   background-color: #FCFCFC;
 }
 
@@ -203,6 +204,10 @@
 /****************************************************************/
 /* Mobile */
 @media only screen and (max-width: 1200px) {
+  .home section {
+    margin: 0 auto 130px;
+  }
+
   .more {
     width: 120px;
     margin-top: 15px;
@@ -265,6 +270,10 @@
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
+  .home section {
+    margin: 0 auto 80px;
+  }
+
   .home .brand h3 {
     font-size: 1.6rem;
   }
