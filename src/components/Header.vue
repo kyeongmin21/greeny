@@ -5,7 +5,7 @@
         <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
     </ul>
-    <ul class="hamburger" v-b-toggle.my-sidebar>
+    <ul class="hamburger" ref="hamburger" @click="hamMenu" v-b-toggle.my-sidebar>
       <img src="/images/svg/symbol.svg" alt="모바일햄버거버튼">
     </ul>
 
@@ -60,7 +60,6 @@ export default {
     goTop() {
       window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     },
-
   }
 }
 </script>

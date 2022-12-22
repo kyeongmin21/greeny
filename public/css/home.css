@@ -105,6 +105,11 @@
 
 .home .brand ul li {
   flex: 1;
+  justify-content: center;
+}
+
+.home .brand ul li img {
+  width: 300px;
 }
 
 .home .brand ul li p {
@@ -136,6 +141,14 @@
   border-right: 1px solid #212121;
 }
 
+/* 브랜드 이미지 */
+.home .brand .brand_content01 li:nth-child(1),
+.home .brand .brand_content02 li:nth-child(2) {
+  background-color: #ccc;
+  justify-content: center;
+  display: flex
+}
+/* 브랜드 텍스트 */
 .home .brand .brand_content01 li:nth-child(2),
 .home .brand .brand_content02 li:nth-child(1) {
   display: flex;
@@ -227,7 +240,7 @@
   }
 
   .home .brand ul li > div {
-    padding: 20px 0;
+    /*padding: 20px 0;*/
     width: 380px;
   }
 
@@ -264,6 +277,10 @@
   }
   .home .event ul {
     width: 90%;
+  }
+
+  .home .brand ul li img {
+    width: 250px;
   }
 }
 
@@ -319,6 +336,9 @@
     font-size: 1.3rem;
   }
 
+  .home .brand ul li {
+    height: 280px;
+  }
 }
 
 
@@ -355,11 +375,7 @@
     font-size: 16px;
   }
 
-  .home .brand ul li {
-    display: flex;
-    height: 350px;
-    overflow: hidden;
-  }
+
 
   .home .brand ul li > div {
     width: 300px;
