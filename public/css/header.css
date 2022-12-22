@@ -365,6 +365,9 @@ div#modal-search___BV_modal_content_ {
 
 
 @media only screen and (max-width: 1200px) {
+  .header {
+    border: 1px solid green;
+  }
   #my-sidebar .navbar_cate,
   #my-sidebar .navbar_menu {
     display: block !important;
@@ -393,6 +396,7 @@ div#modal-search___BV_modal_content_ {
 @media only screen and (max-width: 992px) {
   .header {
     padding: 7px 30px;
+    border: 1px solid red;
   }
 
   .header .hamburger {
@@ -419,6 +423,7 @@ div#modal-search___BV_modal_content_ {
   .header {
     padding: 7px 10px;
     box-sizing: border-box;
+    border: 1px solid blue;
   }
 
   .header .hamburger {
