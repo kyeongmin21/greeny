@@ -5,7 +5,7 @@
         <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
     </ul>
-    <ul class="hamburger" v-b-toggle.my-sidebar>
+    <ul class="hamburger" v-b-toggle.my-sidebar @click.prevent>
       <img src="/images/svg/symbol.svg" alt="모바일햄버거버튼">
     </ul>
 

@@ -31,6 +31,7 @@
 .more {
   width: 150px;
   height: 50px;
+  display: inline-block;
   margin-top: 20px;
   background: url('../images/svg/more_black_line.svg') no-repeat;
   background-size: 100% 100%;
@@ -40,7 +41,7 @@
   width: 150px;
   height: 50px;
   transition: 0.3s;
-  background: url('../images/svg/more_black_line_hover.svg') no-repeat;
+  background: url('../images/svg/more_green_full.svg') no-repeat;
   background-size: 100% 100%;
 }
 
@@ -104,9 +105,6 @@
 
 .home .brand ul li {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .home .brand ul li p {
@@ -115,12 +113,13 @@
   padding: 10px 0;
 }
 
-.home .brand ul li span {
+.home .brand ul li div > span {
   line-height: 24px;
+  display: block;
 }
 
 .home .brand ul li > div {
-  width: 450px;
+  width: 480px;
 }
 
 .home .brand .brand_content01 {
@@ -132,20 +131,16 @@
   border-bottom: 1px solid #212121;
 }
 
-.home .brand .brand_content01 li:nth-child(1) {
-  border-right: 1px solid #212121;
-}
-
-.home .brand .brand_content02 li:nth-child(2) {
-
-}
-
-.home .brand .brand_content01 li:nth-child(2) {
-
-}
-
+.home .brand .brand_content01 li:nth-child(1),
 .home .brand .brand_content02 li:nth-child(1) {
   border-right: 1px solid #212121;
+}
+
+.home .brand .brand_content01 li:nth-child(2),
+.home .brand .brand_content02 li:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -209,11 +204,26 @@
 /* Mobile */
 @media only screen and (max-width: 1200px) {
   .more {
-    width: 130px;
+    width: 120px;
+    margin-top: 15px;
   }
 
   .more:hover {
-    width: 130px;
+    width: 120px;
+  }
+
+  .home .brand h3 {
+    font-size: 1.5rem;
+  }
+
+  .home .brand ul li p {
+    font-size: 1.1rem;
+    padding: 5px 0;
+  }
+
+  .home .brand ul li > div {
+    padding: 20px 0;
+    width: 380px;
   }
 
   .home .title {
@@ -223,6 +233,7 @@
   .home .title h2 {
     width: 250px;
   }
+
 
   .home section .best_challenge {
     width: 90%;
@@ -243,6 +254,9 @@
     margin: 0 auto 20px;
   }
 
+  .home .event h3 {
+    font-size: 1.6rem;
+  }
   .home .event ul {
     width: 90%;
   }
@@ -250,9 +264,37 @@
 
 
 /* Tablet */
-@media only screen and (max-width: 992px) {
-  .home .event ul li h3 {
-    font-size: 1.3rem;
+@media only screen and (max-width: 768px) {
+  .home .brand h3 {
+    font-size: 1.6rem;
+  }
+
+  .home .brand ul {
+    display: unset;
+  }
+
+  .home .brand ul li p {
+    padding: 5px 0;
+  }
+
+  .home .brand ul li {
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+    border-bottom: 1px solid #212121;
+  }
+
+  .home .brand ul li div > span {
+    line-height: 22px;
+  }
+
+  .home .brand .brand_content01 li:nth-child(1) {
+    border-top: 1px solid #212121;
+  }
+
+  .home .brand .brand_content01 li:nth-child(1),
+  .home .brand .brand_content02 li:nth-child(1) {
+    border-right: 0;
   }
 
   .home .daily_look ul {
@@ -262,6 +304,10 @@
 
   .home .daily_look ul li {
     flex: 1 1 40%;
+  }
+
+  .home .event ul li h3 {
+    font-size: 1.3rem;
   }
 
 }
@@ -298,6 +344,16 @@
 
   .home section .best_challenge li p {
     font-size: 16px;
+  }
+
+  .home .brand ul li {
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .home .brand ul li > div {
+    width: 300px;
   }
 
   .home .event ul {
