@@ -415,6 +415,20 @@ div#modal-search___BV_modal_content_ {
   .navbar_cate, .navbar_menu {
     display: none !important;
   }
+
+  .b-sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .b-sidebar>.b-sidebar-header .close {
+    float: inherit!important;
+    width:35px;
+    height: 35px;
+  }
+  #my-sidebar .close_btn {
+    float:right;
+  }
 }
 
 
