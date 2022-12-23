@@ -52,7 +52,12 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
-
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 992) {
+        document.getElementById('my-sidebar').style.display = 'none'
+        document.body.style.overflow = '';
+      }
+    }, true);
   },
   methods: {
     handleScroll() {
@@ -80,5 +85,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
