@@ -5,11 +5,16 @@
         <router-link to="/"><img src="/images/svg/logo_green.svg" alt="로고"></router-link>
       </li>
     </ul>
-    <ul class="hamburger" v-b-toggle.my-sidebar @click.prevent>
+    <ul class="hamburger" ref="hamburger" @click="hamMenu" v-b-toggle.my-sidebar>
       <img src="/images/svg/symbol.svg" alt="모바일햄버거버튼">
     </ul>
 
     <b-sidebar id="my-sidebar" shadow>
+      <template #header="{hide}">
+        <div @click="closeBtn" class="close_btn">
+          <button @click="hide" type="button" aria-label="Close" class="close">×</button>
+        </div>
+      </template>
       <div class="px-3 py-2">
         <Menu/>
         <Category/>
@@ -47,6 +52,7 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+
   },
   methods: {
     handleScroll() {
@@ -60,7 +66,15 @@ export default {
     goTop() {
       window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     },
-
+    hamMenu() {
+      if (!this.$refs.hamburger.classList.contains('not-collapsed')) {
+        document.body.style.overflow = 'hidden';
+      }
+    },
+    closeBtn() {
+      document.getElementById('my-sidebar').classList.toggle('fade-in')
+      document.body.style.overflow = '';
+    }
   }
 }
 </script>

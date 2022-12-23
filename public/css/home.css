@@ -17,7 +17,7 @@
 }
 
 .home section {
-  margin: 0 auto 100px;
+  margin: 0 auto 180px;
 }
 
 .home section:last-child {
@@ -105,6 +105,11 @@
 
 .home .brand ul li {
   flex: 1;
+  justify-content: center;
+}
+
+.home .brand ul li img {
+  width: 300px;
 }
 
 .home .brand ul li p {
@@ -136,6 +141,14 @@
   border-right: 1px solid #212121;
 }
 
+/* 브랜드 이미지 */
+.home .brand .brand_content01 li:nth-child(1),
+.home .brand .brand_content02 li:nth-child(2) {
+  background-color: #ccc;
+  justify-content: center;
+  display: flex
+}
+/* 브랜드 텍스트 */
 .home .brand .brand_content01 li:nth-child(2),
 .home .brand .brand_content02 li:nth-child(1) {
   display: flex;
@@ -181,6 +194,7 @@
   width: 100%;
   height: 300px;
   border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
   background-color: #FCFCFC;
 }
 
@@ -203,6 +217,10 @@
 /****************************************************************/
 /* Mobile */
 @media only screen and (max-width: 1200px) {
+  .home section {
+    margin: 0 auto 130px;
+  }
+
   .more {
     width: 120px;
     margin-top: 15px;
@@ -222,7 +240,7 @@
   }
 
   .home .brand ul li > div {
-    padding: 20px 0;
+    /*padding: 20px 0;*/
     width: 380px;
   }
 
@@ -260,11 +278,19 @@
   .home .event ul {
     width: 90%;
   }
+
+  .home .brand ul li img {
+    width: 250px;
+  }
 }
 
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
+  .home section {
+    margin: 0 auto 80px;
+  }
+
   .home .brand h3 {
     font-size: 1.6rem;
   }
@@ -310,6 +336,9 @@
     font-size: 1.3rem;
   }
 
+  .home .brand ul li {
+    height: 280px;
+  }
 }
 
 
@@ -346,11 +375,7 @@
     font-size: 16px;
   }
 
-  .home .brand ul li {
-    display: flex;
-    height: 350px;
-    overflow: hidden;
-  }
+
 
   .home .brand ul li > div {
     width: 300px;
