@@ -74,7 +74,7 @@
 
       <div class="btn_wrap">
         <b-button variant="outline-secondary">취소</b-button>
-        <b-button variant="secondary">회원가입</b-button>
+        <b-button variant="secondary" @click="joinSuccess" :disabled="inputValidation">회원가입</b-button>
       </div>
     </div>
   </div>
@@ -92,18 +92,22 @@ export default {
   },
   data() {
     return {
-      form_: {
+      form: {
         username: '',
         password: '',
         nickname: '',
       },
-      form: {},
       invalidMessage: '',
       totalAgreeCheck: false,
       personalAgree: false,
       locationAgree: false,
       ageAgree: false,
       marketingAgree: false,
+    }
+  },
+  computed: {
+    inputValidation() {
+      return !(this.form.username !== '' && this.form.password  !== '')
     }
   },
   methods: {
@@ -127,6 +131,8 @@ export default {
         this.totalAgreeCheck = false;
       }
     },
+    joinSuccess() {
+    }
   }
 }
 </script>

@@ -210,6 +210,13 @@ div#modal-search___BV_modal_content_ {
 
 .join .btn_wrap .btn-secondary {
   flex: 2;
+  background-color: #76FF03!important;
+  color: black;
+}
+
+.join .btn_wrap .disabled {
+  background-color: #DBDBDB !important;
+  color: black;
 }
 
 .join .agreement_wrap {
