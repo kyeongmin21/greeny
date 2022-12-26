@@ -1,24 +1,12 @@
 # greeny
 
-## Project setup
-```
-npm install
-```
+### 서비스 목적
+- 슬로우 패션이 가진 고정관념에서 벗어나 **사용자들이 지속가능하고 효율적인 소비습관을 기르도록 돕는 서비스.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 서비스 구조
+- GNB:
+    - 홈 - 큐레이션
+    - 챌린지 - 1벌로 7일, 10벌로 30일 등
+    - 매거진 - 브랜드 소개, 제품 카테고리
+    - 데일리룩/이벤트- 가벼운 스냅사진(좋아요, 댓글, 스크랩)
+    - 마이페이지 - 글쓰기, 탬플릿, 스크랩, 등급 등
