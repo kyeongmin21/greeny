@@ -120,11 +120,7 @@
 
 
 
-  /********** 브랜드 **********/
-.home .brand {
-  width: 100% !important;
-}
-
+/********** 브랜드 **********/
 .home .brand ul {
   width: 100%;
   display: flex;
