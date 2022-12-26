@@ -45,6 +45,14 @@
   background-size: 100% 100%;
 }
 
+.home .title {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home .title h2 {
+  width: 300px;
+}
 
 /********** 베스트 챌린지 **********/
 .home section .best_challenge {
@@ -83,19 +91,38 @@
   background-color: #76FF03;
 }
 
+.home .best_challenge > ul > li {
+  position: relative;
+}
+.home .best_challenge .icon_wrap {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 10;
+}
 
-/********** 브랜드 **********/
+.home .best_challenge .icon_wrap img {
+  padding-top: 0;
+}
+
+.home .best_challenge .heart_icon,
+.home .best_challenge .bookmark_icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.home .best_challenge p img {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+  /********** 브랜드 **********/
 .home .brand {
   width: 100% !important;
-}
-
-.home .title {
-  width: 60%;
-  margin: 0 auto;
-}
-
-.home .title h2 {
-  width: 300px;
 }
 
 .home .brand ul {
@@ -140,6 +167,7 @@
 .home .brand .brand_content02 li:nth-child(1) {
   border-right: 1px solid #212121;
 }
+
 
 /* 브랜드 이미지 */
 .home .brand .brand_content01 li:nth-child(1),
@@ -296,26 +324,32 @@
   }
 
   .home .brand ul {
-    display: unset;
+    display: block;
+    border-top: 1px solid #212121;
+  }
+
+  .home .brand ul li {
+    display: flex;
+    flex: auto;
+    height: 350px;
+    overflow: hidden;
   }
 
   .home .brand ul li p {
     padding: 5px 0;
   }
 
-  .home .brand ul li {
-    display: flex;
-    height: 350px;
-    overflow: hidden;
-    border-bottom: 1px solid #212121;
-  }
-
   .home .brand ul li div > span {
     line-height: 22px;
   }
 
-  .home .brand .brand_content01 li:nth-child(1) {
-    border-top: 1px solid #212121;
+  .home .brand .brand_content01 {
+    border-bottom: none;
+  }
+
+  .home .brand .brand_content02 {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .home .brand .brand_content01 li:nth-child(1),
@@ -374,8 +408,6 @@
   .home section .best_challenge li p {
     font-size: 16px;
   }
-
-
 
   .home .brand ul li > div {
     width: 300px;
