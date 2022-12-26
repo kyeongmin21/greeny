@@ -11,7 +11,9 @@
 
 
       <div class="title mt50">
-        <h2><img src="/images/svg/home_title01.svg" alt="챌린지 타이틀"></h2>
+        <h2>
+          <img src="/images/svg/home_title01.svg" alt="챌린지 타이틀">
+        </h2>
       </div>
 
       <section>
@@ -19,11 +21,31 @@
           <ul>
             <li class="mb30">
               <img src="/images/home/home_img01.png" alt="챌린지 이미지1">
+              <div class="icon_wrap">
+                <img :src="heartImg"
+                     class="heart_icon"
+                     @click="changeHeartImg"
+                     alt="좋아요아이콘" >
+                <img :src="bookmarkImg"
+                     @click="changeBookmarkImg"
+                     class="bookmark_icon"
+                     alt="책갈피아이콘">
+              </div>
               <p><b>[한달나기] 블랙 코트 하나로 일주일 코디하기</b></p>
               <span>자꾸자꾸 손이 가는 겨울 데일리 아이템! 블랙 코트로 스타일링 꿀!팁!</span>
             </li>
             <li>
               <img src="/images/home/home_img02.png" alt="챌린지 이미지2">
+              <div class="icon_wrap">
+                <img :src="heartImg"
+                     class="heart_icon"
+                     @click="changeHeartImg"
+                     alt="좋아요아이콘" >
+                <img :src="bookmarkImg"
+                     @click="changeBookmarkImg"
+                     class="bookmark_icon"
+                     alt="책갈피아이콘">
+              </div>
               <p><b>[일주일챌린지] 최애 카페에서 텀블러 이용해서 할인받고 선물도 받기</b></p>
               <span>최애 카페에서 제공하는 텀블러 이벤트에 참여해서 할인도 받고 선물도...</span>
             </li>
@@ -189,6 +211,8 @@ export default {
   },
   data() {
     return {
+      heartIcon: 'heart',
+      bookmarkIcon: 'bookmark',
       swiperOption: {
         loop: true,
         spaceBetween: 0,
@@ -203,6 +227,25 @@ export default {
       }
     }
   },
+  computed: {
+    heartImg() {
+      return require(`@/assets/images/${this.heartIcon}.svg`)
+    },
+    bookmarkImg() {
+      return require(`@/assets/images/${this.bookmarkIcon}.svg`)
+    }
+  },
+  methods: {
+    changeHeartImg() {
+      if (this.heartIcon === 'heart') this.heartIcon = 'heart_green_fill'
+      else this.heartIcon = 'heart'
+    },
+    changeBookmarkImg() {
+      if (this.bookmarkIcon === 'bookmark') this.bookmarkIcon = 'bookmark_green_fill'
+      else this.bookmarkIcon = 'bookmark'
+    }
+
+  }
 
 }
 </script>
