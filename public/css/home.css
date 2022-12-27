@@ -25,7 +25,7 @@
 }
 
 .home section:last-child {
-  padding-bottom: 300px;
+  padding-bottom: 450px;
 }
 
 .more {
@@ -54,6 +54,15 @@
   width: 300px;
 }
 
+.home h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home h3 span {
+  background-color: #76FF03;
+}
+
 /********** 베스트 챌린지 **********/
 .home section .best_challenge {
   width: 60%;
@@ -69,9 +78,9 @@
   border-top: 1px solid #000;
 }
 
-.home section .best_challenge li p {
+.home section .best_challenge li h3 {
   font-size: 18px;
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 
 .home section .best_challenge li:first-child {
@@ -82,23 +91,15 @@
   padding-top: 15px;
 }
 
-.home h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.home h3 span {
-  background-color: #76FF03;
-}
-
-.home .best_challenge > ul > li {
+.home .best_challenge ul li .img_wrap {
   position: relative;
 }
-.home .best_challenge .icon_wrap {
+
+.home .best_challenge .best_icon {
   position: absolute;
-  top: 20px;
-  right: 0;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 70px;
 }
 
 .home .best_challenge .icon_wrap img {
@@ -111,11 +112,6 @@
   height: 25px;
   margin-right: 5px;
   cursor: pointer;
-}
-
-.home .best_challenge p img {
-  width: 100%;
-  overflow: hidden;
 }
 
 
@@ -315,6 +311,15 @@
     margin: 0 auto 80px;
   }
 
+  .home .best_challenge .best_icon {
+    width: 60px;
+  }
+
+  .home section .best_challenge li h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .home .brand h3 {
     font-size: 1.6rem;
   }
@@ -401,7 +406,7 @@
     width: 100%;
   }
 
-  .home section .best_challenge li p {
+  .home section .best_challenge li h3 {
     font-size: 16px;
   }
 
