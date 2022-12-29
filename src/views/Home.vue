@@ -84,9 +84,17 @@
           <ul>
             <li>
               <img src="/images/home/home_daily01.png" alt="">
-              <p>[여름철필수] 스판 골지 나시</p>
+              <p>[여름철필수] 스판 골지 나시1</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
+                <span>USERNAME</span>
+              </p>
+            </li>
+            <li>
+              <img src="/images/home/home_daily01.png" alt="">
+              <p>[여름철필수] 스판 골지 나시2</p>
+              <p>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -94,7 +102,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -102,7 +110,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -110,7 +118,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -118,7 +126,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -126,7 +134,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
@@ -134,15 +142,7 @@
               <img src="/images/home/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
-                <span>USERNAME</span>
-              </p>
-            </li>
-            <li>
-              <img src="/images/home/home_daily01.png" alt="">
-              <p>[여름철필수] 스판 골지 나시</p>
-              <p>
-                <span><img src="/images/svg/heart.svg" alt="좋아요아이콘"></span>
+                <span><img :src="heartImg" alt="좋아요아이콘"></span>
                 <span>USERNAME</span>
               </p>
             </li>
