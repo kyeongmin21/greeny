@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import "reset.css";
 
 .home {
   width: 100%;
@@ -319,6 +318,14 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  .home .best_challenge .heart_icon,
+  .home .best_challenge .bookmark_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
 
   .home .brand h3 {
     font-size: 1.6rem;
