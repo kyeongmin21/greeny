@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.magazine .magazine_wrap {
+  width: 80%;
+  padding-bottom: 350px;
+  margin: 50px auto;
+}
+
+.magazine .magazine_wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.magazine .magazine_wrap ul li {
+  flex: 1 1 50%;
+  padding: 0 5px 50px;
+}
+
+.magazine .magazine_wrap ul li img {
+  border-top: 1px solid #212121;
+  padding-top: 10px;
+}
+
+
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .magazine .magazine_wrap ul li {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile - Landscape */
+@media (max-width: 480px) {
+  .magazine .magazine_wrap {
+    width: 95%;
+  }
+}
