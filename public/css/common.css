@@ -37,7 +37,6 @@ input[type=checkbox], input[type=radio] {
 .cate_title {
   width: 80%;
   margin: 20px auto 0;
-
 }
 
 .cate_title img {
@@ -136,6 +135,37 @@ input[type=checkbox], input[type=radio] {
 .pb90 { padding-bottom: 90px !important; }
 .pb100 { padding-bottom: 100px !important; }
 
-
 .w100 { width: 100%; }
 .h100 { height: 100%; }
+
+
+
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+
+@media only screen and (max-width: 1200px) {
+  .cate_title {
+    width: 93%;
+    margin: 20px auto 0;
+  }
+
+  .cate_title img {
+    width: 200px;
+  }
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .cate_title img {
+    width: 180px;
+  }
+}
+
+/* Mobile - Landscape */
+@media (max-width: 480px) {
+  .cate_title img {
+    width: 150px;
+  }
+}

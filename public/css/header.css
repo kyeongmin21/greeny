@@ -263,6 +263,14 @@ div#modal-search___BV_modal_content_ {
   .header {
     border: 1px solid green;
   }
+
+  .header .navbar_logo {
+    left: 3%;
+  }
+
+  .header .navbar_menu {
+    right: 3%;
+  }
 }
 
 
