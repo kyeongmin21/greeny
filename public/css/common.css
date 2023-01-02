@@ -159,13 +159,11 @@ input[type=checkbox], input[type=radio] {
 /* Tablet */
 @media only screen and (max-width: 992px) {
   .cate_title img {
-    width: 180px;
+    width: 150px;
   }
 }
 
 /* Mobile - Landscape */
 @media (max-width: 480px) {
-  .cate_title img {
-    width: 150px;
-  }
+
 }
