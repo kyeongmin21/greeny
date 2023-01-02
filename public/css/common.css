@@ -34,6 +34,16 @@ input[type=checkbox], input[type=radio] {
   margin-bottom: 5px;
 }
 
+.cate_title {
+  width: 80%;
+  margin: 20px auto 0;
+
+}
+
+.cate_title img {
+  width: 230px;
+}
+
 
 /********************************/
 /*********** Button *************/

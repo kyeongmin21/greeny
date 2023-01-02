@@ -3,29 +3,17 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import MyPage from './path.my-page'
 import Challenge from './path.challenge'
+import Magazine from './path.magazine'
+import DailyLook from './path.dailylook'
+import Event from './path.event'
+
 
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
-  },
-  {
-    path: '/magazine',
-    name: 'Magazine',
-    component: () => import(/* webpackChunkName: "magazine" */ '@/views/magazine/List.vue')
-  },
-  {
-    path: '/dailyLook',
-    name: 'DailyLook',
-    component: () => import(/* webpackChunkName: "dailyLook" */ '@/views/dailyLook/List.vue')
-  },
-  {
-    path: '/event',
-    name: 'Event',
-    component: () => import(/* webpackChunkName: "event" */ '@/views/event/List.vue')
   },
   {
     path: '*',
@@ -41,8 +29,11 @@ const router = new VueRouter({
   routes
 })
 
-
 router.addRoute(MyPage)
 router.addRoute(Challenge)
+router.addRoute(Magazine)
+router.addRoute(DailyLook)
+router.addRoute(Event)
+
 
 export default router

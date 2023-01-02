@@ -1,12 +1,10 @@
 <template>
-  <div class="detail_cont">
-    <h2>디테일</h2>
-  </div>
+  <router-view/>
 </template>
 
 <script>
 export default {
-  name: "List"
+  name: "Main"
 }
 </script>
 

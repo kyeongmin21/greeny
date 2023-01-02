@@ -2,9 +2,9 @@
   <div class="home">
     <div class="banner_wrap">
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
-        <swiper-slide><img src="/images/home/top_banner02.png" alt="메인배너2"></swiper-slide>
-        <swiper-slide><img src="/images/home/top_banner01.png" alt="메인배너1"></swiper-slide>
+        <swiper-slide><img src="/images/top_banner01.png" alt="메인배너1"></swiper-slide>
+        <swiper-slide><img src="/images/top_banner02.png" alt="메인배너2"></swiper-slide>
+        <swiper-slide><img src="/images/top_banner01.png" alt="메인배너1"></swiper-slide>
         <!-- pagination -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
@@ -21,7 +21,7 @@
           <ul>
             <li class="mb30">
               <div class="img_wrap">
-                <img src="/images/home/home_img01.png" alt="챌린지 이미지1">
+                <img src="/images/home_img01.png" alt="챌린지 이미지1">
                 <img src="/images/svg/best.svg" alt="베스트아이콘" class="best_icon">
               </div>
               <h3>[한달나기] 블랙 코트 하나로 일주일 코디하기</h3>
@@ -38,7 +38,7 @@
             </li>
             <li>
               <div class="img_wrap">
-                <img src="/images/home/home_img02.png" alt="챌린지 이미지2">
+                <img src="/images/home_img02.png" alt="챌린지 이미지2">
                 <img src="/images/svg/best.svg" alt="베스트아이콘" class="best_icon">
               </div>
               <h3>[일주일챌린지] 최애 카페에서 텀블러 이용해서 할인받고 선물도 받기</h3>
@@ -83,7 +83,7 @@
         <div class="daily_look">
           <ul>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시1</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -91,7 +91,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시2</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -99,7 +99,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -107,7 +107,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -115,7 +115,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -123,7 +123,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -131,7 +131,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -139,7 +139,7 @@
               </p>
             </li>
             <li>
-              <img src="/images/home/home_daily01.png" alt="">
+              <img src="/images/home_daily01.png" alt="">
               <p>[여름철필수] 스판 골지 나시</p>
               <p>
                 <span><img :src="heartImg" alt="좋아요아이콘"></span>
@@ -161,7 +161,7 @@
         <div class="brand">
           <ul class="brand_content01">
             <li>
-              <img src="/images/home/home_img03-1.png" alt="브랜드 이미지1">
+              <img src="/images/home_img03-1.png" alt="브랜드 이미지1">
             </li>
             <li>
               <div>
@@ -193,7 +193,7 @@
               </div>
             </li>
             <li>
-              <img src="/images/home/home_img04-1.png" alt="브랜드 이미지2">
+              <img src="/images/home_img04-1.png" alt="브랜드 이미지2">
             </li>
           </ul>
         </div>
