@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+.event .event_wrap {
+  width: 80%;
+  padding-bottom: 350px;
+  margin: 50px auto;
+}
+.event .event_wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event .event_wrap ul li {
+  flex: 1 1 50%;
+  padding: 0 5px 30px;
+}
+
+.event .event_wrap ul li img {
+  cursor: pointer;
+}
+
+.event .event_wrap ul li h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .event .event_wrap ul li {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile - Landscape */
+@media (max-width: 480px) {
+  .event .event_wrap {
+    width: 95%;
+  }
+  .event .event_wrap ul li h3 {
+    font-size: 1rem;
+  }
+}

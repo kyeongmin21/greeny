@@ -1,5 +1,5 @@
 <template>
-  <div class="challenge_list">
+  <div class="challenge challenge_list">
 
     <div class="cate_title">
       <img src="/images/challenge_h1.png" alt="챌린지타이틀">
