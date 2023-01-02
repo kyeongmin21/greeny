@@ -38,7 +38,7 @@
 .header .navbar_logo {
   position: absolute;
   top: 8px;
-  left: 3%;
+  left: 10%;
 }
 
 .header .navbar_logo li {
@@ -52,7 +52,7 @@
 .header .navbar_menu {
   position: absolute;
   top: 0;
-  right: 3%;
+  right: 10%;
   display: inline-block;
 }
 
@@ -262,6 +262,14 @@ div#modal-search___BV_modal_content_ {
 @media only screen and (max-width: 1200px) {
   .header {
     border: 1px solid green;
+  }
+
+  .header .navbar_logo {
+    left: 3%;
+  }
+
+  .header .navbar_menu {
+    right: 3%;
   }
 }
 

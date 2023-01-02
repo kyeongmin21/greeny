@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <h2>데일리룩</h2>
+  <div class="list_cont">
+    <div class="cate_title">
+      <img src="/images/dailylook_h1.png" alt="데일리룩타이틀">
+    </div>
+
   </div>
 </template>
 

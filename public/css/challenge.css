@@ -24,7 +24,7 @@
 
 .challenge_list section {
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .challenge_list .nav-tabs {
@@ -45,7 +45,7 @@
   margin-bottom: 3rem;
 }
 .challenge_list section .tab-pane ul li h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0.7rem;
 }
@@ -67,4 +67,44 @@
   width: 20px;
   cursor: pointer;
   margin-right: 10px;
+}
+
+
+.challenge_list .nav-tabs {
+  font-size: 12px;
+}
+
+.challenge_list .nav-link {
+  padding: 5px 10px;
+}
+
+
+/****************************************************************/
+/**************************** 반응형 ****************************/
+/****************************************************************/
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 992px) {
+  .challenge_list section {
+    width: 95%;
+  }
+
+  .challenge_list section .tab-pane ul li {
+    flex: 1 1 50%;
+  }
+}
+
+/* Mobile - Landscape */
+@media (max-width: 480px) {
+  .challenge_list section .tab-pane ul li {
+    flex: 1 1 100%;
+  }
+  .challenge_list section {
+    margin: 20px auto 50px;
+  }
 }
