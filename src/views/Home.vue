@@ -9,13 +9,11 @@
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
 
-
       <div class="title mt50">
         <h2>
           <img src="/images/svg/home_title01.svg" alt="챌린지 타이틀">
         </h2>
       </div>
-
       <section>
         <div class="best_challenge">
           <ul>
@@ -29,7 +27,7 @@
                 <img :src="heartImg"
                      class="heart_icon"
                      @click="changeHeartImg"
-                     alt="좋아요아이콘" >
+                     alt="좋아요아이콘">
                 <img :src="bookmarkImg"
                      @click="changeBookmarkImg"
                      class="bookmark_icon"
@@ -46,7 +44,7 @@
                 <img :src="heartImg"
                      class="heart_icon"
                      @click="changeHeartImg"
-                     alt="좋아요아이콘" >
+                     alt="좋아요아이콘">
                 <img :src="bookmarkImg"
                      @click="changeBookmarkImg"
                      class="bookmark_icon"
@@ -59,7 +57,6 @@
           </router-link>
         </div>
       </section>
-
 
       <section>
         <div class="event">
@@ -74,7 +71,6 @@
           </ul>
         </div>
       </section>
-
 
       <div class="title">
         <h2><img src="/images/svg/home_title03.png" alt="브랜드 타이틀"></h2>
@@ -153,7 +149,6 @@
         </div>
       </section>
 
-
       <div class="title">
         <h2><img src="/images/svg/home_title02.png" alt="브랜드 타이틀"></h2>
       </div>
@@ -183,11 +178,11 @@
               <div>
                 <h3><span>톤28</span></h3>
                 <p>아낌없이, 원재료 그대로</p>
-                <span >
+                <span>
                 제절 원료를 그때그때 따서 소량 신선하게 생산하고 없는 재료는
                 가장 좋은 성분을 선정하여 거짓 없이 단단히 사용하고 있습니다.
               </span>
-                <router-link to="/brand" >
+                <router-link to="/brand">
                   <div class="more"></div>
                 </router-link>
               </div>
@@ -199,13 +194,23 @@
         </div>
       </section>
 
+
+      <div class="popup" v-if="this.show">
+        <img src="/images/event_banner01.jpg" alt="이벤트 팝업">
+        <div class="popup_btn_wrap">
+          <button @click="todayClose">오늘하루 그만보기</button>
+          <button @click="close">닫기</button>
+        </div>
+      </div>
     </div>
+
+
   </div>
 </template>
 
 <script>
-import {Swiper, SwiperSlide} from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+import {Swiper, SwiperSlide} from "vue-awesome-swiper";
 
 export default {
   name: 'Home',
@@ -215,6 +220,7 @@ export default {
   },
   data() {
     return {
+      show: false,
       heartIcon: 'heart',
       bookmarkIcon: 'bookmark',
       swiperOption: {
@@ -230,6 +236,13 @@ export default {
         },
       }
     }
+  },
+  mounted() {
+    const getToday = new Date();
+    const getDay = getToday.getDate();
+    const getDate = localStorage.getItem('today')
+    if (Number(getDay)=== Number(getDate)) this.show = false;
+    else this.show = true;
   },
   computed: {
     heartImg() {
@@ -247,13 +260,38 @@ export default {
     changeBookmarkImg() {
       if (this.bookmarkIcon === 'bookmark') this.bookmarkIcon = 'bookmark_green_fill'
       else this.bookmarkIcon = 'bookmark'
+    },
+    todayClose() {
+      const today = new Date()
+      const saveDay = today.getDate();
+      localStorage.setItem('today', JSON.stringify(saveDay)); // 로컬스토리지에 현재 날짜 넣기
+      this.show = false;
+    },
+    close() {
+      this.show = false;
     }
-
-  }
+  },
 
 }
 </script>
 
 <style>
+.popup {
+  width: 500px;
+  background-color:#fff;
+  z-index: 100;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+}
 
+.popup_btn_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup_btn_wrap button {
+  font-size: 14px;
+  font-weight: bold;
+}
 </style>
