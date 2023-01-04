@@ -3,7 +3,7 @@
     <div class="login_cont">
 
       <div class="login_input">
-        <h3>LOGIN</h3>
+        <h3>로그인</h3>
         <ul>
           <li>
             <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
