@@ -62,11 +62,11 @@
   cursor: pointer;
 }
 
-.router-link-active {
+.header .category .router-link-active {
   background: url('../images/svg/logo_box.svg') no-repeat;
 }
 
-.router-link-exact-active {
+.header .category .router-link-exact-active {
   background: url('../images/svg/logo_box.svg') no-repeat;
 }
 

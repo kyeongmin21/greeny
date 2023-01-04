@@ -9,14 +9,14 @@ const addRoute =
         path: 'login',
         name: 'Login',
         prop: true,
-        meta: {layout: 'NoneLayout'},
+        meta: {layout: 'LoginLayout'},
         component: () => import(/* webpackChunkName: "myPage" */ '@/views/myPage/Login'),
       },
       {
         path: 'join',
         name: 'Join',
         prop: true,
-        meta: {layout: 'NoneLayout'},
+        meta: {layout: 'LoginLayout'},
         component: () => import(/* webpackChunkName: "join" */ '@/views/myPage/Join'),
       },
     ]
