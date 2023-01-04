@@ -195,17 +195,21 @@
       </section>
 
 
-      <div class="popup" v-if="this.show">
-        <img src="/images/event_banner01.jpg" alt="이벤트 팝업">
-        <div class="popup_btn_wrap">
-          <button @click="todayClose">오늘하루 그만보기</button>
-          <button @click="close">닫기</button>
-        </div>
-      </div>
-    </div>
+        <div class="popup"
+             v-if="this.show"
+             ref="popupImg"
+             @drag="onDrag($event)"
+             @dragend="onDragEnd($event)">
+          <img src="/images/event_banner01.jpg"
+               alt="이벤트 팝업">
+          <div class="popup_btn_wrap">
+            <button @click="todayClose">오늘 그만보기</button>
+            <button @click="close">닫기</button>
+          </div>
+        </div><!-- popup -->
 
-
-  </div>
+    </div><!-- banner_wrap -->
+  </div><!-- home -->
 </template>
 
 <script>
@@ -234,14 +238,14 @@ export default {
           el: ".swiper-pagination",
           type: "progressbar",
         },
-      }
+      },
     }
   },
   mounted() {
     const getToday = new Date();
-    const getDay = getToday.getDate();
-    const getDate = localStorage.getItem('today')
-    if (Number(getDay)=== Number(getDate)) this.show = false;
+    const getDate = getToday.getDate();
+    const getLocalDate = localStorage.getItem('today')
+    if (Number(getDate) === Number(getLocalDate)) this.show = false;
     else this.show = true;
   },
   computed: {
@@ -269,29 +273,22 @@ export default {
     },
     close() {
       this.show = false;
+    },
+    onDrag(event) {
+      const popup = document.querySelector('.popup')
+      popup.style.left = event.pageX - popup.offsetWidth / 2 + 'px';
+      popup.style.top = event.pageY - popup.offsetHeight / 2 + 'px';
+    },
+    onDragEnd(event) {
+      document.removeEventListener('mousemove', this.onDrag(event));
     }
   },
 
 }
 </script>
 
+
 <style>
-.popup {
-  width: 500px;
-  background-color:#fff;
-  z-index: 100;
-  position: absolute;
-  top: 100px;
-  right: 100px;
-}
 
-.popup_btn_wrap {
-  display: flex;
-  justify-content: space-between;
-}
 
-.popup_btn_wrap button {
-  font-size: 14px;
-  font-weight: bold;
-}
 </style>

@@ -231,6 +231,31 @@
 }
 
 
+/********** 팝업 **********/
+.popup {
+  width: 300px;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.popup_btn_wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.popup_btn_wrap button {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
 /****************************************************************/
 /**************************** 반응형 ****************************/
 /****************************************************************/
