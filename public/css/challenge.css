@@ -24,7 +24,7 @@
 
 .challenge_list section {
   width: 80%;
-  margin: 50px auto;
+  margin: 30px auto 50px;
 }
 
 .challenge_list .nav-tabs {
@@ -84,7 +84,9 @@
 /****************************************************************/
 
 @media only screen and (max-width: 1200px) {
-
+  .challenge_list section {
+    width: 95%;
+  }
 }
 
 

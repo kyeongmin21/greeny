@@ -31,7 +31,9 @@
 /****************************************************************/
 
 @media only screen and (max-width: 1200px) {
-
+  .event .event_wrap {
+    width: 95%;
+  }
 }
 
 

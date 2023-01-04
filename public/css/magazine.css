@@ -27,7 +27,9 @@
 /****************************************************************/
 
 @media only screen and (max-width: 1200px) {
-
+  .magazine .magazine_wrap {
+    width: 95%;
+  }
 }
 
 

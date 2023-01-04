@@ -106,6 +106,9 @@
     border: 1px solid #76FF03 !important;
 }
 
+.join input {
+    accent-color: #76FF03;
+}
 
 @media (max-width: 480px) {
     .login, .join {
