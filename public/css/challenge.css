@@ -1,13 +1,15 @@
 @charset "utf-8";
 
-.challenge_list .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.challenge_list > .nav-tabs .nav-item.show .nav-link,
+.challenge_list .nav-tabs .nav-link.active {
   border-radius: 0;
   color: #fff!important;
   border: 1px solid #212121!important;
   background-color: #212121!important;
 }
 
-.challenge_list .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+.challenge_list > .nav-tabs .nav-link:focus,
+.challenge_list .nav-tabs .nav-link:hover {
   border-radius: 0;
   border: 1px solid #212121!important;
 }
@@ -22,9 +24,13 @@
   padding-bottom: 300px;
 }
 
+.challenge_list a {
+  color: #212121;
+}
+
 .challenge_list section {
   width: 80%;
-  margin: 50px auto;
+  margin: 30px auto 50px;
 }
 
 .challenge_list .nav-tabs {
@@ -84,7 +90,9 @@
 /****************************************************************/
 
 @media only screen and (max-width: 1200px) {
-
+  .challenge_list section {
+    width: 95%;
+  }
 }
 
 

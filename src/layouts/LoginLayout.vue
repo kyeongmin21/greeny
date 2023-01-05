@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <Header />
+    <slot />
+  </div>
+</template>
+
+<script>
+import Header from "@/components/Header.vue";
+
+export default {
+  name: "NoneLayout",
+  components: {
+    Header
+  },
+}
+</script>
+
+<style scoped>
+
+</style>

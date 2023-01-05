@@ -11,6 +11,10 @@
   border-bottom: 1px solid #333;
 }
 
+.header a {
+  color: #212121;
+}
+
 .header .hamburger {
   display: none;
 }
@@ -21,7 +25,6 @@
   display: flex;
   justify-content: center;
   font-weight: 600;
-
 }
 
 .header .navbar_cate li {
@@ -62,11 +65,11 @@
   cursor: pointer;
 }
 
-.router-link-active {
+.header .category .router-link-active {
   background: url('../images/svg/logo_box.svg') no-repeat;
 }
 
-.router-link-exact-active {
+.header .category .router-link-exact-active {
   background: url('../images/svg/logo_box.svg') no-repeat;
 }
 
@@ -187,63 +190,6 @@ div#modal-search___BV_modal_content_ {
 
 .modal_search .search_word ul:nth-child(2) li span {
   color: #76FF03;
-}
-
-
-
-/********************************/
-/*********** Join.vue ***********/
-/********************************/
-.join .join_cont {
-  width: 400px;
-}
-
-.join .btn_wrap {
-  display: flex;
-}
-
-.join .btn_wrap .btn-outline-secondary {
-  flex: 1;
-  margin-right: 5px;
-}
-
-.join .btn_wrap .btn-secondary {
-  flex: 2;
-  background-color: #76FF03!important;
-  color: black;
-}
-
-.join .btn_wrap .disabled {
-  background-color: #DBDBDB !important;
-  color: black;
-}
-
-.join .agreement_wrap {
-  margin: 40px 0;
-}
-
-.join .agreement_wrap .agreement {
-  padding: 20px;
-  border: 1px solid #808080;
-}
-
-.join .agreement_wrap .agreement ul li label {
-  margin: 5px;
-}
-
-.join .agreement_wrap .agreement ul li span {
-  color: #76FF03;
-}
-
-.join .agreement_wrap #all-agree {
-  margin-right: 5px;
-}
-
-.join .agreement_wrap p {
-  color: #808080;
-  margin-top: 5px;
-  text-align: right;
-  text-decoration: underline;
 }
 
 #my-sidebar .navbar_cate{
