@@ -52,11 +52,29 @@ extend('double', {
   message: '유효한 실수를 입력해주세요.'
 })
 
+// 한글, 영문, 숫자만 가능하게
+extend('id', (value) => {
+  const pattern = /^(?=.*[a-zA-Z])[-a-zA-Z0-9]{2,14}$/;
+  if (!pattern.test(value)) {
+    return '아이디를 올바르게 입력해주세요.'
+  }
+  return true
+})
+
+
 extend('password', (value) => {
   if (!/^.*(?=^.{8,20}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/.test(value)) {
     return "비밀번호를 올바르게 입력해주세요."
   }
   return true;
+})
+
+extend('name', (value) => {
+  const pattern = /^(?=.*[a-zA-Z가-힣])[-a-zA-Z가-힣]{1,14}$/;
+  if (!pattern.test(value)) {
+    return '이름 올바르게 입력해주세요.'
+  }
+  return true
 })
 
 // 한글, 영문, 숫자만 가능하게

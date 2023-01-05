@@ -10,11 +10,8 @@ img {
   width: 100%;
 }
 
-a {
-  color: #212121 !important;
-}
-
 a:hover {
+  color: unset!important;
   text-decoration: none !important;
 }
 
@@ -61,14 +58,13 @@ input[type=checkbox], input[type=radio] {
   border: 1px solid #808080 !important;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover, .btn-outline-secondary:active {
   color: #808080 !important;
   background-color: transparent !important;
 }
 
 .btn-secondary {
   background-color: #DBDBDB !important;
-  border: none !important;
 }
 
 
