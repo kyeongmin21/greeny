@@ -33,23 +33,19 @@
       </div><!-- agreement -->
 
       <div class="btn_wrap mt30">
-        <ul>
-          <li>
-            <router-link to="/join/step2">
-              <b-button variant="secondary" :disabled="inputValidation">
-                동의하고 가입하기
-              </b-button>
-            </router-link>
-          </li>
-        </ul>
+        <router-link to="/join/step2">
+          <b-button variant="secondary" :disabled="inputValidation">
+            동의하고 가입하기
+          </b-button>
+        </router-link>
       </div>
 
 
     </div><!--agreement_wrap  -->
 
-    <ModalAgree />
-    <ModalPersonalAgree />
-    <ModalMarketingAgree />
+    <ModalAgree/>
+    <ModalPersonalAgree/>
+    <ModalMarketingAgree/>
 
   </div>
 </template>
@@ -101,6 +97,6 @@ export default {
 }
 </script>
 
-<style >
+<style>
 
 </style>

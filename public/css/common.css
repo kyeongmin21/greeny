@@ -67,6 +67,10 @@ input[type=checkbox], input[type=radio] {
   background-color: #DBDBDB !important;
 }
 
+.btn-light:hover {
+  background-color: #f8f9fa!important;
+  border-color: #f8f9fa!important;
+}
 
 /********************************/
 /*********** Margin *************/

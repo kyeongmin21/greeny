@@ -288,11 +288,12 @@ div#modal-marketing-agree .modal-body b {
 .find ul li {
   display: inline-block;
   border: 1px solid #212121;
-  width: 200px;
+  width: 50%;
   height: 40px;
   text-align: center;
   align-items: center;
   line-height: 36px;
+
 }
 
 .find ul li a {
@@ -312,13 +313,31 @@ div#modal-marketing-agree .modal-body b {
   color: #fff!important;
 }
 
+.find h6 {
+  font-weight: 600;
+  margin-top: 20px;
+}
 
+.find .btn_wrap button.btn.btn-secondary {
+  width: 100%;
+  border: unset;
+  font-weight: 600;
+}
 
+.find .btn_wrap p {
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 10px;
+  color: #808080;
+}
 
 @media (max-width: 480px) {
-  .login, .join {
+  .login, .join, .find {
+    margin-top: 50px;
     padding: 20px;
   }
+
 
   .login .login_cont .login_process ul:nth-child(1) {
     width: 200px;
