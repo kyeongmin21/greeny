@@ -210,6 +210,42 @@
   text-decoration: underline;
 }
 
+
+/* step1 이용약관 */
+div#modal-agree,
+div#modal-personal-agree,
+div#modal-marketing-agree {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -200px
+}
+
+div#modal-agree___BV_modal_content_,
+div#modal-personal-agree___BV_modal_content_,
+div#modal-marketing-agree___BV_modal_content_{
+  width: 400px;
+  height: 500px;
+}
+
+div#modal-agree .modal-body,
+div#modal-personal-agree .modal-body,
+div#modal-marketing-agree .modal-body {
+  font-size: 13px;
+  overflow-y: scroll;
+}
+
+div#modal-agree .modal-body b,
+div#modal-personal-agree .modal-body b,
+div#modal-marketing-agree .modal-body b {
+  font-size:16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+
 .join .step2 .step2_wrap {
   margin: 40px auto;
 }
@@ -246,6 +282,9 @@
   height: 50px;
 }
 
+
+
+
 @media (max-width: 480px) {
   .login, .join {
     padding: 20px;
@@ -254,4 +293,22 @@
   .login .login_cont .login_process ul:nth-child(1) {
     width: 200px;
   }
+
+  div#modal-agree,
+  div#modal-personal-agree,
+  div#modal-marketing-agree {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -150px
+  }
+
+  div#modal-agree___BV_modal_content_,
+  div#modal-personal-agree___BV_modal_content_,
+  div#modal-marketing-agree___BV_modal_content_ {
+    width: 300px;
+    height: 400px;
+  }
+
 }

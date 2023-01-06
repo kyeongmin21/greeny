@@ -15,16 +15,19 @@
           </li>
           <li>
             <input type="checkbox" id="personal-agree" v-model="personalAgree">
-            <label for="personal-agree"> 이용약관 동의 (필수)</label><span>보기</span>
+            <label for="personal-agree"> 이용약관 동의 (필수)</label>
+            <span v-b-modal.modal-agree>보기</span>
           </li>
           <li>
             <input type="checkbox" id="location-agree" v-model="locationAgree">
-            <label for="location-agree"> 개인정보 수집 및 이용 동의 (필수)</label><span>보기</span>
+            <label for="location-agree"> 개인정보 수집 및 이용 동의 (필수)</label>
+            <span v-b-modal.modal-personal-agree>보기</span>
           </li>
 
           <li>
             <input type="checkbox" id="marketing-agree" v-model="marketingAgree">
-            <label for="marketing-agree">마케팅 정보 수진 동의 (선택)</label><span>보기</span>
+            <label for="marketing-agree">마케팅 정보 수진 동의 (선택)</label>
+            <span v-b-modal.modal-marketing-agree>보기</span>
           </li>
         </ul>
       </div><!-- agreement -->
@@ -43,12 +46,26 @@
 
 
     </div><!--agreement_wrap  -->
+
+    <ModalAgree />
+    <ModalPersonalAgree />
+    <ModalMarketingAgree />
+
   </div>
 </template>
 
 <script>
+import ModalAgree from "@/components/modal/ModalAgree.vue";
+import ModalPersonalAgree from "@/components/modal/ModalPersonalAgree.vue";
+import ModalMarketingAgree from "@/components/modal/ModalMarketingAgree.vue";
+
 export default {
   name: "Step1",
+  components: {
+    ModalAgree,
+    ModalPersonalAgree,
+    ModalMarketingAgree,
+  },
   data() {
     return {
       totalAgreeCheck: false,
@@ -84,6 +101,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 
 </style>
