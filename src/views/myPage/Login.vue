@@ -56,9 +56,13 @@
 
       <div class="login_process">
         <ul>
-          <li>이메일 찾기</li>
+          <li>
+            <router-link to="/find/id"><a href="">이메일 찾기</a></router-link>
+          </li>
           <span>| </span>
-          <li>비밀번호 찾기</li>
+          <li>
+            <router-link to="/find/pw"><a href="">비밀번호 찾기</a></router-link>
+          </li>
         </ul>
         <ul>
           <li>

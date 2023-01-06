@@ -60,7 +60,7 @@ import ModalPersonalAgree from "@/components/modal/ModalPersonalAgree.vue";
 import ModalMarketingAgree from "@/components/modal/ModalMarketingAgree.vue";
 
 export default {
-  name: "Step1",
+  name: "JoinStep1",
   components: {
     ModalAgree,
     ModalPersonalAgree,

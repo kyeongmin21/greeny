@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.login, .join {
+.login, .join, .find {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -10,7 +10,9 @@
   color: #212121;
 }
 
-.login .login_cont {
+.login
+.login_cont,
+.find_cont {
   width: 400px;
 }
 
@@ -280,6 +282,34 @@ div#modal-marketing-agree .modal-body b {
 .join .step3 .step3_wrap button {
   width: 100%;
   height: 50px;
+}
+
+/* id pw 찾기 */
+.find ul li {
+  display: inline-block;
+  border: 1px solid #212121;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  line-height: 36px;
+}
+
+.find ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #212121;
+}
+
+.find .router-link-active {
+  display: block;
+  height: 100%;
+  background-color: #212121;
+}
+
+.find .router-link-active a {
+  color: #fff!important;
 }
 
 
