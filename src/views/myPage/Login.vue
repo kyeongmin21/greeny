@@ -8,13 +8,13 @@
           <li>
             <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
               <b-form @submit.prevent="passes(onSubmit);" @reset="resetForm" class=" ">
-                <InputWithValidation rules="required|email"
+                <InputWithValidation rules="required|id"
                                      type="email"
-                                     title="이메일"
+                                     title="아이디"
                                      name="form.id"
                                      v-model="form.username"
                                      autocomplete="off"
-                                     placeholder="이메일을 입력해주세요."/>
+                                     placeholder="아이디 입력해주세요."/>
                 <InputWithValidation v-if="togglePassword"
                                      rules="required|password"
                                      type="text"
@@ -103,7 +103,7 @@ export default {
   data() {
     return {
       form_: {
-        username: '',
+        id: '',
         password: ''
       },
       form: {},
