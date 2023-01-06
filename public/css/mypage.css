@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.login, .join {
+.login, .join, .find {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -10,7 +10,9 @@
   color: #212121;
 }
 
-.login .login_cont {
+.login
+.login_cont,
+.find_cont {
   width: 400px;
 }
 
@@ -45,12 +47,10 @@
   justify-content: space-between;
 }
 
-.login .login_cont .login_input ul li .btn-light {
+.login .login_cont .login_input ul li .btn-dark {
   border-radius: 0;
   width: 100%;
   color: #fff;
-  font-weight: 600;
-  background-color: #212121;
   margin-bottom: 10px;
 }
 
@@ -108,16 +108,6 @@
   color: #808080;
   font-size: 16px;
 }
-
-.login .login_cont input:focus {
-  border: 1px solid #76FF03 !important;
-  color: #212121;
-}
-
-
-
-
-
 
 
 .join .join_cont {
@@ -279,16 +269,61 @@ div#modal-marketing-agree .modal-body b {
 
 .join .step3 .step3_wrap button {
   width: 100%;
-  height: 50px;
 }
 
+/* id pw 찾기 */
+.find ul li {
+  display: inline-block;
+  border: 1px solid #212121;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  line-height: 36px;
 
+}
 
+.find ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #212121;
+}
+
+.find .router-link-active {
+  display: block;
+  height: 100%;
+  background-color: #212121;
+}
+
+.find .router-link-active a {
+  color: #fff!important;
+}
+
+.find h6 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.find .btn_wrap button.btn.btn-secondary {
+  width: 100%;
+  border: unset;
+}
+
+.find .btn_wrap p {
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 10px;
+  color: #808080;
+}
 
 @media (max-width: 480px) {
-  .login, .join {
+  .login, .join, .find {
+    margin-top: 50px;
     padding: 20px;
   }
+
 
   .login .login_cont .login_process ul:nth-child(1) {
     width: 200px;

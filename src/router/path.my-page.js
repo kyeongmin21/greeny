@@ -21,27 +21,51 @@ const addRoute =
         children: [
           {
             path: 'step1',
-            name: 'Step1',
+            name: 'JoinStep1',
             prop: true,
             meta: {layout: 'LoginLayout'},
-            component: () => import(/* webpackChunkName: "step1" */ '@/views/myPage/Step1'),
+            component: () => import(/* webpackChunkName: "step1" */ '@/views/myPage/JoinStep1.vue'),
           },
           {
             path: 'step2',
-            name: 'Step2',
+            name: 'JoinStep2',
             prop: true,
             meta: {layout: 'LoginLayout'},
-            component: () => import(/* webpackChunkName: "step2" */ '@/views/myPage/Step2'),
+            component: () => import(/* webpackChunkName: "step2" */ '@/views/myPage/JoinStep2.vue'),
           },
           {
             path: 'step3',
-            name: 'Step3',
+            name: 'JoinStep3',
             prop: true,
             meta: {layout: 'LoginLayout'},
-            component: () => import(/* webpackChunkName: "step3" */ '@/views/myPage/Step3'),
+            component: () => import(/* webpackChunkName: "step3" */ '@/views/myPage/JoinStep3.vue'),
           },
         ]
       },
+      {
+        path: 'find',
+        name: 'Find',
+        prop: true,
+        meta: {layout: 'LoginLayout'},
+        component: () => import(/* webpackChunkName: "find" */ '@/views/myPage/Find'),
+        children: [
+          {
+            path: 'id',
+            name: 'FindId',
+            prop: true,
+            meta: {layout: 'LoginLayout'},
+            component: () => import(/* webpackChunkName: "step3" */ '@/views/myPage/FindId.vue'),
+          },
+          {
+            path: 'pw',
+            name: 'FindPw',
+            prop: true,
+            meta: {layout: 'LoginLayout'},
+            component: () => import(/* webpackChunkName: "pw" */ '@/views/myPage/FindPw.vue'),
+          },
+        ]
+      },
+
     ]
   }
 export default addRoute

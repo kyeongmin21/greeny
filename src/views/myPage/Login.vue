@@ -8,13 +8,13 @@
           <li>
             <ValidationObserver ref="observer" v-slot="{ passes }" tag="div">
               <b-form @submit.prevent="passes(onSubmit);" @reset="resetForm" class=" ">
-                <InputWithValidation rules="required|email"
+                <InputWithValidation rules="required|id"
                                      type="email"
-                                     title="이메일"
+                                     title="아이디"
                                      name="form.id"
                                      v-model="form.username"
                                      autocomplete="off"
-                                     placeholder="이메일을 입력해주세요."/>
+                                     placeholder="아이디 입력해주세요."/>
                 <InputWithValidation v-if="togglePassword"
                                      rules="required|password"
                                      type="text"
@@ -49,16 +49,20 @@
             </div>
           </li>
           <li>
-            <b-button variant="light">로그인</b-button>
+            <b-button variant="dark">로그인</b-button>
           </li>
         </ul>
       </div>
 
       <div class="login_process">
         <ul>
-          <li>이메일 찾기</li>
+          <li>
+            <router-link to="/find/id"><a href="">이메일 찾기</a></router-link>
+          </li>
           <span>| </span>
-          <li>비밀번호 찾기</li>
+          <li>
+            <router-link to="/find/pw"><a href="">비밀번호 찾기</a></router-link>
+          </li>
         </ul>
         <ul>
           <li>
@@ -99,7 +103,7 @@ export default {
   data() {
     return {
       form_: {
-        username: '',
+        id: '',
         password: ''
       },
       form: {},

@@ -40,6 +40,12 @@ input[type=checkbox], input[type=radio] {
   width: 230px;
 }
 
+input:focus {
+  border: 1px solid #76FF03 !important;
+  color: #212121;
+}
+
+
 
 /********************************/
 /*********** Button *************/
@@ -67,6 +73,14 @@ input[type=checkbox], input[type=radio] {
   background-color: #DBDBDB !important;
 }
 
+.btn-light:hover {
+  background-color: #f8f9fa!important;
+  border-color: #f8f9fa!important;
+}
+
+.btn-dark {
+  background-color: #23272b!important;
+}
 
 /********************************/
 /*********** Margin *************/

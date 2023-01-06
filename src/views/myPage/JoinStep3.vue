@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Step3"
+  name: "JoinStep3"
 }
 </script>
 

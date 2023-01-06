@@ -75,7 +75,7 @@ import {ValidationObserver} from 'vee-validate'
 import InputWithValidation from '@/components/common/validations/inputbox'
 
 export default {
-  name: "Step2",
+  name: "JoinStep2",
   components: {
     ValidationObserver,
     InputWithValidation,
