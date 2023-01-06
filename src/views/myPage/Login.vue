@@ -49,7 +49,7 @@
             </div>
           </li>
           <li>
-            <b-button variant="light">로그인</b-button>
+            <b-button variant="dark">로그인</b-button>
           </li>
         </ul>
       </div>
