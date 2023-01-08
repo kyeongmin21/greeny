@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="banner_wrap">
-      <swiper class="swiper" :options="swiperOption">
+      <swiper class="swiper" :options="swiperOption" v-if="width > 480" >
         <swiper-slide><img src="/images/top_banner01.png" alt="메인배너1"></swiper-slide>
         <swiper-slide><img src="/images/top_banner02.png" alt="메인배너2"></swiper-slide>
         <swiper-slide><img src="/images/top_banner01.png" alt="메인배너1"></swiper-slide>
@@ -231,6 +231,7 @@ export default {
   },
   data() {
     return {
+      width: 0,
       show: false,
       heartIcon: 'heart',
       bookmarkIcon: 'bookmark',
@@ -254,6 +255,9 @@ export default {
     const getLocalDate = localStorage.getItem('today')
     if (Number(getDate) === Number(getLocalDate)) this.show = false;
     else this.show = true;
+    window.addEventListener('resize', () => {
+      this.width = window.innerWidth;
+    }, true);
   },
   computed: {
     heartImg() {
