@@ -175,6 +175,9 @@
   align-items: center;
 }
 
+.home .brand {
+  padding-bottom: 480px;
+}
 
 /********** 데일리룩 **********/
 .home .daily_look {
@@ -442,6 +445,10 @@
     font-size: 16px;
   }
 
+  .home .brand {
+    padding-bottom: 380px;
+  }
+
   .home .brand ul li > div {
     width: 300px;
   }
@@ -449,5 +456,4 @@
   .home .event ul {
     width: 90%;
   }
-
 }
