@@ -8,6 +8,13 @@
         <!-- pagination -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
+      <swiper class="swiper" :options="swiperOption" v-else >
+        <swiper-slide><img src="/images/m_top_banner01.jpg" alt="메인배너1"></swiper-slide>
+        <swiper-slide><img src="/images/m_top_banner02.jpg" alt="메인배너2"></swiper-slide>
+        <swiper-slide><img src="/images/m_top_banner01.jpg" alt="메인배너1"></swiper-slide>
+        <!-- pagination -->
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
 
       <div class="title mt50">
         <h2>
