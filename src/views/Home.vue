@@ -253,12 +253,13 @@ export default {
     const getToday = new Date();
     const getDate = getToday.getDate();
     const getLocalDate = localStorage.getItem('today')
+
     if (Number(getDate) === Number(getLocalDate)) this.show = false;
     else this.show = true;
+
     this.width = window.innerWidth;
     window.addEventListener('resize', () => {
       this.width = window.innerWidth;
-      console.log(this.width)
     }, true);
   },
   computed: {
